@@ -1,8 +1,28 @@
 <!--See grunt server:dev or whatever
 Integrate slider
 -->
-  <div>
-    <p>
-     Search.results[0] {{search.results[0].school.name}}
-    </p>
-  </div>
+<div>
+  <p>
+    API Functions (SLOWLY) {{search.results[0].school.name}}
+  </p>
+</div>
+<div class="searchFields">
+<div id="accordion">
+    <div class="panel">
+        <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
+            Heading 1
+        </a>
+        <div id="collapse1">
+            Content for panel 1
+        </div>
+    </div>
+    <div class="panel">
+        <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+            Heading 2
+        </a>
+        <div id="collapse2" class="collapse in">
+            Content for panel 2
+        </div>
+    </div>
+</div>
+</div>
