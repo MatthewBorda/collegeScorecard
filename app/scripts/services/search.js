@@ -17,8 +17,8 @@ angular.module('collegeScorecardApp')
         query: {
           method: 'GET',
           params: {
-            schoolName: 'Seattle University',
-            bogus: null
+            schoolName: 'Seattle',
+           
           },
           isArray: false
         }

@@ -14,5 +14,5 @@ angular.module('collegeScorecardApp')
 //       'AngularJS',
 //       'Karma'
 //     ];
-  $scope.search = search.query();
+  $scope.searchQuer = search.query();
   });
