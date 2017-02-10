@@ -7,12 +7,8 @@
  * # mapGoogle
  * Factory in the collegeScorecardApp.
  */
-// angular.module('collegeScorecardApp',['ngMaps'])
-// .controller('mapgoogle', function(NgMap) {
-//   NgMap.getMap().then(function(map) {
-//     console.log(map.getCenter());
-//     console.log('markers', map.markers);
-//     console.log('shapes', map.shapes);
-//   });
-// });
-
+//AIzaSyDNVX4jb2QDDKPgxQ38dwIafC-GPEpnh0A 
+angular.module('appMaps', ['uiGmapgoogle-maps'])
+    .controller('mainCtrl', function($scope) {
+        $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+    });

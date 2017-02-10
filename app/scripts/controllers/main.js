@@ -16,10 +16,5 @@ angular.module('collegeScorecardApp')
 //     ];
 //   search, marker
   $scope.search = search.query();
-//   $scope.map = {
-//     center: [40.7, -74]
-//   }
-//   $scope.marker = {
-//     position: [40.7, -74]
-//   }
+
   });

@@ -59,7 +59,10 @@ Integrate slider
   </div>
   <div class="map" >
     <H1>MAP </H1>
-
+<div id="map_canvas" ng-controller="mainCtrl">
+      <ui-gmap-google-map center="map.center" zoom="map.zoom"></ui-gmap-google-map>
+ </div>
+  <H1>MAP 2</H1>   
 <map ng-transclude class='google-map' center='map.center'> 
   <marker position='marker.position'></marker>
 </map>
