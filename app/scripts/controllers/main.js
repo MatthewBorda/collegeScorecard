@@ -8,7 +8,7 @@
  * Controller of the collegeScorecardApp
  */
 angular.module('collegeScorecardApp',['ngMaps'])
-  .controller('MainCtrl', function ($scope, search) {
+  .controller('MainCtrl', function ($scope, search, map, marker) {
 //     this.awesomeThings = [
 //       'HTML5 Boilerplate',
 //       'AngularJS',
