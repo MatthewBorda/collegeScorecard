@@ -7,7 +7,7 @@
  * # mapGoogle
  * Factory in the collegeScorecardApp.
  */
-angular.module('collegeScorecardApp',['ngMap'])
+angular.module('collegeScorecardApp',['ngMaps'])
 .controller('mapgoogle', function(NgMap) {
   NgMap.getMap().then(function(map) {
     console.log(map.getCenter());
