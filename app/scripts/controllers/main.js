@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the collegeScorecardApp
  */
-angular.module('collegeScorecardApp')
+angular.module('collegeScorecardApp', ['uiGmapgoogle-maps'])
   .controller('MainCtrl', function ($scope, search, map) {
 //     this.awesomeThings = [
 //       'HTML5 Boilerplate',
