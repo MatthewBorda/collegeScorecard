@@ -8,7 +8,7 @@
  * Controller of the collegeScorecardApp
  */
 angular.module('collegeScorecardApp')
-  .controller('MainCtrl', function ($scope, search) {
+  .controller('MainCtrl', function ($scope, search, map) {
 //     this.awesomeThings = [
 //       'HTML5 Boilerplate',
 //       'AngularJS',
@@ -16,5 +16,6 @@ angular.module('collegeScorecardApp')
 //     ];
 //   search, marker
   $scope.search = search.query();
+  $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 
   });
