@@ -8,17 +8,18 @@
  * Controller of the collegeScorecardApp
  */
 angular.module('collegeScorecardApp',['ngMaps'])
-  .controller('MainCtrl', function ($scope, search, map, marker) {
+  .controller('MainCtrl', function ($scope, map) {
 //     this.awesomeThings = [
 //       'HTML5 Boilerplate',
 //       'AngularJS',
 //       'Karma'
 //     ];
-  $scope.search = search.query();
+//   search, marker
+//   $scope.search = search.query();
   $scope.map = {
     center: [40.7, -74]
   }
-  $scope.marker = {
-    position: [40.7, -74]
-  }
+//   $scope.marker = {
+//     position: [40.7, -74]
+//   }
   });
