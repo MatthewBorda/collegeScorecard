@@ -7,8 +7,8 @@
  * # MainCtrl
  * Controller of the collegeScorecardApp
  */
-angular.module('collegeScorecardApp', ['uiGmapgoogle-maps'])
-  .controller('MainCtrl', function ($scope) {
+angular.module('collegeScorecardApp', ['ngMap'])
+  .controller('MainCtrl', function (NgMap) {
 //     this.awesomeThings = [
 //       'HTML5 Boilerplate',
 //       'AngularJS',
@@ -16,6 +16,11 @@ angular.module('collegeScorecardApp', ['uiGmapgoogle-maps'])
 //     ];
 //   search, marker
 //   $scope.search = search.query();
-  $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
-
+//   ['uiGmapgoogle-maps']
+//   $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+  NgMap.getMap().then(function(map) {
+    console.log(map.getCenter());
+    console.log('markers', map.markers);
+    console.log('shapes', map.shapes);
+  });
   });
