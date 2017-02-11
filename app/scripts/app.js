@@ -20,7 +20,7 @@ angular
     'ngMaps',
     'ngTouch',
     'uiGmapgoogle-maps',
-    'ngMaps'
+    'ngMap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
