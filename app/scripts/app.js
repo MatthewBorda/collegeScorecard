@@ -19,8 +19,8 @@ angular
     'ngSanitize',
     'ngMaps',
     'ngTouch',
-    'uiGmapgoogle-maps',
-    'ngMap'
+    'uiGmapgoogle-maps'
+//     'ngMap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
