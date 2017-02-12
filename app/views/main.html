@@ -14,18 +14,23 @@ Integrate slider
     </p>
   </div>
   <div ng-if="searchQuery">
- <dl ng-repeat="name in schoolFound.results">
+ <dl ng-repeat="schools in schoolFound.results">
 <!--      <dt>E: {{name}}</dt> -->
-   <dt>F: {{name.school.name}}</dt>
-     <dt>G: {{name.id}}</dt>
+   <dt>F: {{schools.school.name}}</dt>
+     <dt>G: {{schools.id}}</dt>
      
       
     </dl>
-   <dl ng-repeat="schools in schoolFound.results">
-    
-     <dt>I: {{schools.id}}</dt>
-    </dl>
-    
+           <table>
+            <tr>
+                <th>Stock</th>
+                <th ng-repeat="schools in schoolFound.results">{{schools.school.name}}</th>
+            </tr>
+            <tr ng-repeat="key in keys">
+  <td>{{labels[key]}}</td>
+                <td ng-repeat="schools in schoolFound.results">G: {{schools.id}}</td>
+            </tr>
+        </table>
   </div>
 
 
@@ -94,7 +99,7 @@ Integrate slider
 </map>
   </div>
   <div class="results">
-    <div class="demo-card">
+<!--     <div class="demo-card">
       <div class="card">
         <div class="card-header">
           This is a card header
@@ -125,8 +130,10 @@ Integrate slider
           This is a card footer
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <div class="saved grid">
+    
+    
   </div>
