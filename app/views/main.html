@@ -1,6 +1,33 @@
 <!--See grunt server:dev or whatever
 Integrate slider
 -->
+<h1>Find a School</h1>
+<p class="lead">
+  <div ng-init="school='Seattle University'">
+    <p>
+      <label for="school">School:
+<input type="text" name="school" ng-model="school">
+</label>
+    </p>
+    <p>
+      <button class="btn btn-lg btn-primary" ng-click="findCities()">Find Schools</button>
+    </p>
+  </div>
+  <div ng-if="searchQuery">
+    <p class="lead">{{schoolsFound.count}} schools found matching the query: {{searchQuery}}.
+    </p>
+    <dl ng-repeat="city in citiesFound.list">
+      <dt>A: {{search.results[0].school.name}}</dt>
+      <dd>B: {{search.results.school.name}}</dd>
+      <dt>C: {{results.school.name}}</dt>
+      
+      </dd>
+    </dl>
+  </div>
+</p>
+
+
+
 <div>
   <p>
     API Functions (SLOWLY) {{search.results[0].school.name}}
@@ -38,10 +65,10 @@ Integrate slider
           <p>Average Net Price, by Income Level</p>
           <p>Debt at Graduation</p>
           <p>Estimated monthly loan payments</p>
-          
+
         </div>
       </div>
-            <div class="panel">
+      <div class="panel">
         <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse4">
             Completions and Post-Graduation Outcomes
         </a>
@@ -52,51 +79,52 @@ Integrate slider
           <p>Post-graduation Earnings (3 years from graduation)</p>
           <p>Post-graduation Earnings (1 year from graduation)</p>
           <p>Share of Former Students Earning Over $25,000</p>
-          
+
         </div>
       </div>
     </div>
   </div>
-  <div class="map" >
-    <H1>MAP </H1>
-<div class = "angular-google-map-container">
-   <ui-gmap-google-map center="map.center" zoom="map.zoom"></ui-gmap-google-map>
-    </div>
-     
-  <H1>MAP 2</H1>   
-<map ng-transclude class='google-map' center='map.center'> 
+  <div class="map">
+
+
+    <H1>MAP</H1>
+    <map ng-transclude class='google-map' center='map.center'> 
   <marker position='marker.position'></marker>
 </map>
   </div>
   <div class="results">
-  <div class="demo-card">
-    <div class="card">
+    <div class="demo-card">
+      <div class="card">
         <div class="card-header">
-            This is a card header
+          This is a card header
         </div>
         <img class="card-img-top" src="http://placekitten.com/500/200">
         <div class="card-block">
-            <h4 class="card-title">Card title</h4>
-            <h6 class="card-subtitle text-muted">Support card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
+          <h4 class="card-title">University Name</h4>
+          <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
         </div>
         <div class="card-block">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">School link</a>
         </div>
         <div class="card-block">
-            <a href="#" class="btn btn-primary">Button</a>
+          <a href="#" class="btn btn-primary">Save</a>
         </div>
+        <div class="card-block">
+          <a href="#" class="btn btn-primary">Get more info</a>
+        </div>
+
         <div class="card-footer text-muted">
-            This is a card footer
+          This is a card footer
         </div>
+      </div>
     </div>
-</div>
   </div>
 
   <div class="saved grid">
