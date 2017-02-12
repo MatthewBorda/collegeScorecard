@@ -14,9 +14,9 @@ Integrate slider
     </p>
   </div>
   <div ng-if="searchQuery">
-    <p class="lead">{{schoolsFound.count}} schools found matching the query: {{searchQuery}}.
+    <p class="lead">{{schoolsFound.total}} / {{schoolsFound.metadata.total}} schools found matching the query: {{searchQuery}}.
     </p>
-    <dl ng-repeat="city in citiesFound.list">
+    <dl ng-repeat="results.school.name in schoolFound.list">
       <dt>A: {{search.results[0].school.name}}</dt>
       <dd>B: {{search.results.school.name}}</dd>
       <dt>C: {{results.school.name}}</dt>
