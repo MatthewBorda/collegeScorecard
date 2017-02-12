@@ -23,12 +23,14 @@ Integrate slider
     </dl>
            <table>
             <tr>
-                <th>Stock</th>
+                <th>Schools:</th>
                 <th ng-repeat="schools in schoolFound.results">{{schools.school.name}}</th>
             </tr>
             <tr ng-repeat="key in keys">
-  <td>{{labels[key]}}</td>
-                <td ng-repeat="schools in schoolFound.results">G: {{schools.id}}</td>
+            <td>ID:</td>
+                <td ng-repeat="schools in schoolFound.results">{{schools.id}}</td>
+            <td>URL:</td>
+                <td ng-repeat="schools in schoolFound.results">{{school_url}}</td>
             </tr>
         </table>
   </div>
