@@ -14,10 +14,10 @@ angular.module('collegeScorecardApp')
 
       // Public API here
       return $resource('https://api.data.gov/ed/collegescorecard/v1/schools?school.name=:schoolName&api_key=xqfqZmKUIPqNYDG8WVRvF3079XzgGgXtyJSloKzQ', {}, {
-        query: {
+        find: {
           method: 'GET',
           params: {
-            schoolName: 'Seattle',
+            query: 'Seattle',
            
           },
           isArray: false
