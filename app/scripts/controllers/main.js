@@ -17,9 +17,10 @@ $scope.findSchools = function() {
     });
   $scope.searchQuery =  $scope.school; 
   }
- $scope.keys = ["id"];
+ $scope.keys = ["id","school_url"];
     $scope.labels = {
-        ID: "ID"
+        ID: "ID",
+      school_url:"school_url"
     };
 //   ['uiGmapgoogle-maps']
 //   $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
