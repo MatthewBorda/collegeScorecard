@@ -14,23 +14,14 @@ Integrate slider
     </p>
   </div>
   <div ng-if="searchQuery">
-    <p class="lead">{{schoolsFound.metadata.total}} schools found matching the query: {{searchQuery}}.
-    </p>
  <dl ng-repeat="name in schoolFound.results">
-      <dt>A: {{search.results[0].school.name}}</dt>
-      <dd>B: {{search.results.school.name}}</dd>
-      <dt>C: {{results.school.name}}</dt>
+   
+      <dt>C: {{id}}</dt>
   <dt>D please: {{school.name}}</dt>
    <dt>E please: {{name}}</dt>
       
       </dd>
     </dl>
-    
-<dl ng-repeat="school.name in schoolFound.results">
-      <dt>A: {{search.results[0].school.name}}</dt>
-      <dd>B: {{search.results.school.name}}</dd>
-      <dt>C: {{resultsschool.name}}</dt>
-  <dt>D please: {{school.name}}</dt>
       
       </dd>
     </dl>
@@ -40,9 +31,7 @@ Integrate slider
 
 
 <div>
-  <p>
-    API Functions (SLOWLY) {{search.results[0].school.name}}
-  </p>
+
 </div>
 <div class="searchFields">
   <div id="accordion">
