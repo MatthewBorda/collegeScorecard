@@ -16,13 +16,16 @@ Integrate slider
   <div ng-if="searchQuery">
     <p class="lead">{{schoolsFound.metadata.total}} schools found matching the query: {{searchQuery}}.
     </p>
-    <dl ng-repeat="results.school.name in schoolFound.list">
+ <dl ng-repeat="name in schoolFound.results.school">
       <dt>A: {{search.results[0].school.name}}</dt>
       <dd>B: {{search.results.school.name}}</dd>
       <dt>C: {{results.school.name}}</dt>
+  <dt>D please: {{school.name}}</dt>
+   <dt>E please: {{name}}</dt>
       
       </dd>
     </dl>
+    
 <dl ng-repeat="school.name in schoolFound.results">
       <dt>A: {{search.results[0].school.name}}</dt>
       <dd>B: {{search.results.school.name}}</dd>
