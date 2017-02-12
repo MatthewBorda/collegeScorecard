@@ -15,12 +15,15 @@ Integrate slider
   </div>
   <div ng-if="searchQuery">
  <dl ng-repeat="name in schoolFound.results">
-     <dt>E please: {{name}}</dt>
+     <dt>E: {{name}}</dt>
       
     </dl>
    <dl ng-repeat="schools in schoolFound.results">
-     <dt>E please: {{school.name}}</dt>
-      
+     <dt>F: {{school.name}}</dt>
+     <dt>G: {{id}}</dt>
+      <dt>H: {{[school.name]}}</dt>
+     <dt>I: {{["school.name"]}}</dt>
+     <dt>J: {{"school.name"}}</dt>
     </dl>
     
   </div>
