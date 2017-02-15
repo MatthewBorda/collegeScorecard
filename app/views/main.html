@@ -37,6 +37,25 @@ Integrate slider
                        
 
         </table>
+    
+<table>
+            <tr>
+                <th>Schools:</th>
+                <th ng-repeat="schools in schoolFound.results">{{schools.school.name}}</th>
+            </tr>
+            <tr ng-repeat="schools in schoolFound.results">
+            <td>ID:</td>
+                <td>{{schools.id}}</td>
+              </tr>
+  <tr>
+              <td>URL:</td>
+                <td ng-repeat="schools in schoolFound.results">{{schools.school_url}}</td>
+            </tr>
+            
+             
+                       
+
+        </table>    
   </div>
 
 
