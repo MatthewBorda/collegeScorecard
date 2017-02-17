@@ -17,11 +17,11 @@ Integrate slider
   <div ng-if="searchQuery">
     <div>
   <H1>Grid test unlikely to work </H1>
-<div id="grid1" ui-grid="{ data: schoolsFound.results.school }" class="grid"></div>  
+<div id="grid1" ui-grid="{ data: schoolsFound.results.school.name }" class="grid"></div>  
 </div>
       <div>
   <H1>Grid test unlikely to work 2 </H1>
-<div id="grid1" ui-grid="{ data: schoolsFind }" class="grid"></div>  
+<div id="grid1" ui-grid="{ data: schoolsFind.results.school.name }" class="grid"></div>  
 </div>
  <dl ng-repeat="schools in schoolFound.results">
 <!--      <dt>E: {{name}}</dt> -->
