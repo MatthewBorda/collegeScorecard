@@ -23,7 +23,7 @@ $scope.findSchools = function() {
       $scope.selectedItem = item;
         alert($scope.selectedItem);
     }
- 
+ $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 //  $scope.keys = ["id","school_url"];
 //     $scope.labels = {
 //         ID: "ID",

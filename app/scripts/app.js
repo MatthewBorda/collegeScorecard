@@ -17,7 +17,7 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngMap',
+    'ngMaps',
     'ngTouch',
     'ui.grid',
 //     'ngstorage',
