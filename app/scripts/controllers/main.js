@@ -6,8 +6,8 @@
  * @description
  * # MainCtrl
  * Controller of the collegeScorecardApp
- */
-angular.module('collegeScorecardApp', ['ui.grid'])
+ , ['ui.grid']*/
+angular.module('collegeScorecardApp')
   .controller('MainCtrl', function ($scope, search) {
 $scope.schoolsFound = search.find()
 
