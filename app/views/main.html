@@ -98,7 +98,13 @@ Integrate slider
           <p>Share of Former Students Earning Over $25,000</p>
 </div>
 </div>       
-
+<div>
+  <H1>MAP</H1>
+    <map ng-transclude class='google-map' center='map.center[42.374429, -71.118177]'> 
+  <marker position='marker.position'></marker>
+</map>
+  
+</div>
 
 <div class="results">
   <div ng-if="searchQuery">
@@ -106,58 +112,20 @@ Integrate slider
     <dl ng-repeat="schools in schoolFound.results">
     <div class="card" style="width: 20rem;">
       <h4 class="card-title">{{schools.school.name}}</h4>
-       <div class="card-footer">
+      <p>{{schools.location}}</p>
+       <p>       {{schools.location.lon}}       </p>
+            <p>       {{schools.location.lat}}       </p>
+      <div class="card-footer">
    
          <a href=" {{schools.school.school_url}}">Link</a>
   </div>
       </div>
-      <!--      <dt>E: {{name}}</dt> -->
-      <dt>F: {{schools.school.name}}</dt>
-      <dt>G: {{schools.id}}</dt>
-<!-- <H1>MAP</H1>
-    <map ng-transclude class='google-map' center='map.center'> 
-  <marker position='marker.position'></marker>
-</map> -->
+    
+    
+
   </div> 
-
-    </dl>
-    <table>
-      <tr>
-        <th>Schools:</th>
-        <th ng-repeat="schools in schoolFound.results">{{schools.school.name}}</th>
-      </tr>
-      <tr ng-repeat="key in keys">
-        <td>ID:</td>
-        <td ng-repeat="schools in schoolFound.results">{{schools.id}}</td>
-      </tr>
-      <tr ng-repeat="key in keys">
-        <td>URL:</td>
-        <td ng-repeat="schools in schoolFound.results">{{schools.id}}</td>
-      </tr>
-
-
-
-
-    </table>
-
-    <table>
-      <tr>
-        <th>Schools:</th>
-        <th ng-repeat="schools in schoolFound.results">{{schools.school.name}}</th>
-      </tr>
-      <tr ng-repeat="schools in schoolFound.results">
-        <td>ID:</td>
-        <td>{{schools.id}}</td>
-      </tr>
-      <tr>
-        <td>URL:</td>
-        <td ng-repeat="schools in schoolFound.results">{{schools.school_url}}</td>
-      </tr>
-
-
-
-
-    </table>
+  </div>
+   
     <!--     <div class="demo-card">
       <div class="card">
         <div class="card-header">
@@ -190,7 +158,7 @@ Integrate slider
         </div>
       </div>
     </div> -->
-  </div>
+
   <!-- 
   <div class="saved grid">
      <div>
@@ -202,4 +170,3 @@ Integrate slider
 <div id="grid1" ui-grid="{ data: schoolsFind.results.school.name }" class="grid"></div>  
 </div> -->
 
-</div>
