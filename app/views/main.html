@@ -5,81 +5,79 @@ Integrate slider
 
 
 <div class="searchFields">
-  
+
   <h1>Find a School</h1>
-<p class="lead">
-  <div ng-init="school='Seattle University'">
-    <p>
-      <label for="school">School:
+  <p class="lead">
+    <div ng-init="school='Seattle University'">
+      <p>
+        <label for="school">School:
 <input type="text" name="school" ng-model="school">
 </label>
-    </p>
-    <p>
-    <button class="btn btn-lg btn-primary" ng-click="findSchools()">Find Schools</button>
-    </p>
-    
-    
-  </div>
-<!-- Drop down test   -->
-  
-    <div class="dropdown">
+      </p>
+      <p>
+        <button class="btn btn-lg btn-primary" ng-click="findSchools()">Find Schools</button>
+      </p>
+
+
+    </div>
+    <div class="input-group">
+
+      <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+    </div>
+    <!-- Drop down test   -->
+    <div class='degreeProgram'>
+      <div class="dropdown">
+        <h1>Degree/Program</h1>
         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Degree Test
+            Degree
           <span class="caret"></span>
       </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
           <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
         </ul>
-   </div>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Program
+          <span class="caret"></span>
+      </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
+        </ul>
+      </div>
+    </div>
+   <div class='Location'>
+      <div class="dropdown">
+        <h1>Location</h1>
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            State
+          <span class="caret"></span>
+      </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Region
+          <span class="caret"></span>
+      </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
+        </ul>
+      </div>
+     <div class="input-group">
+       <p>Enter a Zip code</p>
+  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+        <div class="input-group">
+       <p>Mile radius</p>
+  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+</div>
+    </div>
+</div>
 
-  <div ng-if="searchQuery">
-   
- <dl ng-repeat="schools in schoolFound.results">
-<!--      <dt>E: {{name}}</dt> -->
-   <dt>F: {{schools.school.name}}</dt>
-     <dt>G: {{schools.id}}</dt>
-     
-      
-    </dl>
-           <table>
-            <tr>
-                <th>Schools:</th>
-                <th ng-repeat="schools in schoolFound.results">{{schools.school.name}}</th>
-            </tr>
-            <tr ng-repeat="key in keys">
-            <td>ID:</td>
-                <td ng-repeat="schools in schoolFound.results">{{schools.id}}</td> </tr>
-            <tr ng-repeat="key in keys">
-              <td>URL:</td>
-                <td ng-repeat="schools in schoolFound.results">{{schools.id}}</td>
-            </tr>
-            
-             
-                       
 
-        </table>
-    
-<table>
-            <tr>
-                <th>Schools:</th>
-                <th ng-repeat="schools in schoolFound.results">{{schools.school.name}}</th>
-            </tr>
-            <tr ng-repeat="schools in schoolFound.results">
-            <td>ID:</td>
-                <td>{{schools.id}}</td>
-              </tr>
-  <tr>
-              <td>URL:</td>
-                <td ng-repeat="schools in schoolFound.results">{{schools.school_url}}</td>
-            </tr>
-            
-             
-                       
-
-        </table>    
-  </div>
-
-  <!--glyphicon glyphicon-chevron-down        -->
+<!--glyphicon glyphicon-chevron-down        -->
 <!--   <div id="accordion">
     <div class="panel">
       
@@ -138,8 +136,54 @@ Integrate slider
   <marker position='marker.position'></marker>
 </map>
   </div> -->
-  <div class="results">
-<!--     <div class="demo-card">
+<div class="results">
+  <div ng-if="searchQuery">
+
+    <dl ng-repeat="schools in schoolFound.results">
+      <!--      <dt>E: {{name}}</dt> -->
+      <dt>F: {{schools.school.name}}</dt>
+      <dt>G: {{schools.id}}</dt>
+
+
+    </dl>
+    <table>
+      <tr>
+        <th>Schools:</th>
+        <th ng-repeat="schools in schoolFound.results">{{schools.school.name}}</th>
+      </tr>
+      <tr ng-repeat="key in keys">
+        <td>ID:</td>
+        <td ng-repeat="schools in schoolFound.results">{{schools.id}}</td>
+      </tr>
+      <tr ng-repeat="key in keys">
+        <td>URL:</td>
+        <td ng-repeat="schools in schoolFound.results">{{schools.id}}</td>
+      </tr>
+
+
+
+
+    </table>
+
+    <table>
+      <tr>
+        <th>Schools:</th>
+        <th ng-repeat="schools in schoolFound.results">{{schools.school.name}}</th>
+      </tr>
+      <tr ng-repeat="schools in schoolFound.results">
+        <td>ID:</td>
+        <td>{{schools.id}}</td>
+      </tr>
+      <tr>
+        <td>URL:</td>
+        <td ng-repeat="schools in schoolFound.results">{{schools.school_url}}</td>
+      </tr>
+
+
+
+
+    </table>
+    <!--     <div class="demo-card">
       <div class="card">
         <div class="card-header">
           This is a card header
@@ -172,7 +216,7 @@ Integrate slider
       </div>
     </div> -->
   </div>
-<!-- 
+  <!-- 
   <div class="saved grid">
      <div>
   <H1>Grid test unlikely to work </H1>
@@ -182,5 +226,5 @@ Integrate slider
   <H1>Grid test unlikely to work 2 </H1>
 <div id="grid1" ui-grid="{ data: schoolsFind.results.school.name }" class="grid"></div>  
 </div> -->
-    
-  </div>
+
+</div>
