@@ -18,7 +18,11 @@ $scope.findSchools = function() {
   $scope.searchQuery =  $scope.school; 
   }
 
-
+ $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
+    $scope.degreeselected = function (item) {
+      $scope.selectedItem = item;
+        alert($scope.selectedItem);
+    }
  
 //  $scope.keys = ["id","school_url"];
 //     $scope.labels = {

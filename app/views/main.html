@@ -1,7 +1,12 @@
 <!--See grunt server:dev or whatever
 Integrate slider
 -->
-<h1>Find a School</h1>
+
+
+
+<div class="searchFields">
+  
+  <h1>Find a School</h1>
 <p class="lead">
   <div ng-init="school='Seattle University'">
     <p>
@@ -12,17 +17,23 @@ Integrate slider
     <p>
     <button class="btn btn-lg btn-primary" ng-click="findSchools()">Find Schools</button>
     </p>
-    <p>{{results.school.name}}</p>
+    
+    
   </div>
+<!-- Drop down test   -->
+  <div ng-controller="SubjectDropDownController">
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Degree
+          <span class="caret"></span>
+      </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}a>li>
+        </ul>
+   </div>
+</div>
   <div ng-if="searchQuery">
-    <div>
-  <H1>Grid test unlikely to work </H1>
-<div id="grid1" ui-grid="{ data: schoolsFound.results.school.name }" class="grid"></div>  
-</div>
-      <div>
-  <H1>Grid test unlikely to work 2 </H1>
-<div id="grid1" ui-grid="{ data: schoolsFind.results.school.name }" class="grid"></div>  
-</div>
+   
  <dl ng-repeat="schools in schoolFound.results">
 <!--      <dt>E: {{name}}</dt> -->
    <dt>F: {{schools.school.name}}</dt>
@@ -68,12 +79,10 @@ Integrate slider
         </table>    
   </div>
 
-
-
-<div class="searchFields">
-  <div id="accordion">
+  <!--glyphicon glyphicon-chevron-down        -->
+<!--   <div id="accordion">
     <div class="panel">
-      <!--glyphicon glyphicon-chevron-down        -->
+      
       <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
             Filter 1
         </a>
@@ -120,7 +129,7 @@ Integrate slider
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="map">
 
 
@@ -165,6 +174,13 @@ Integrate slider
   </div>
 
   <div class="saved grid">
-    
+     <div>
+  <H1>Grid test unlikely to work </H1>
+<div id="grid1" ui-grid="{ data: schoolsFound.results.school.name }" class="grid"></div>  
+</div>
+      <div>
+  <H1>Grid test unlikely to work 2 </H1>
+<div id="grid1" ui-grid="{ data: schoolsFind.results.school.name }" class="grid"></div>  
+</div>
     
   </div>
