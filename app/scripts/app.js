@@ -19,6 +19,7 @@ angular
     'ngSanitize',
     'ngMaps',
     'ngTouch',
+    'ui.grid',
 //     'ngstorage',
     'uiGmapgoogle-maps'
 //     'ngMap'
