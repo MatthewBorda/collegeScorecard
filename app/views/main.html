@@ -5,164 +5,172 @@ Integrate slider
 
 
 <div class="searchFields">
-<div class= "mainSearch">
-  <h1>Find a School</h1>
-  <p class="lead">
-    <div ng-init="school='Seattle University'">
-      <p>
-        <label for="school">School:<input type="text" name="school" ng-model="school"></label>
-      </p>
-      <p>
-        <button class="btn btn-lg btn-primary" ng-click="findSchools()">Find Schools</button>
-      </p>
-    </div>
+  <div class="mainSearch">
+    <h1>Find a School</h1>
+    <p class="lead">
+      <div ng-init="school='Seattle University'">
+        <p>
+          <label for="school">School:<input type="text" name="school" ng-model="school"></label>
+        </p>
+        <p>
+          <button class="btn btn-lg btn-primary" ng-click="findSchools()">Find Schools</button>
+        </p>
+      </div>
   </div>
-<div class='degreeProgram'>
-      <div class="dropdown">
-        <h1>Degree/Program</h1>
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  <div class='degreeProgram'>
+    <div class="dropdown">
+      <h1>Degree/Program</h1>
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Degree
           <span class="caret"></span>
       </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Program
           <span class="caret"></span>
       </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
-        </ul>
-      </div>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
+      </ul>
     </div>
-<div class='Location'>
-      <h1>Location</h1>
-      <div class="dropdown">
-       
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  </div>
+  <div class='Location'>
+    <h1>Location</h1>
+    <div class="dropdown">
+
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             State
           <span class="caret"></span>
       </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Region
           <span class="caret"></span>
       </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
-        </ul>
-      </div>
-     <div class="input-group">
-       <p>Enter a Zip code</p>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-        <div class="input-group">
-       <p>Mile radius</p>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-</div>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
+      </ul>
     </div>
-</div>
-<div class='likeMe'>
-  <h1> Student Profile
+    <div class="input-group">
+      <p>Enter a Zip code</p>
+      <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+      <div class="input-group">
+        <p>Mile radius</p>
+        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+      </div>
+    </div>
+  </div>
+  <div class='likeMe'>
+    <h1> Student Profile
     
   </h1>
-      <p>Acceptance Rates</p>
-        <p>Test Scores</p>
-  <p>SAT</p>
-   <p>SAT</p>
-        <p>% By Race/Ethnicity</p>
-        <p>% First Generation</p>
-        <p>% Pell Grant Recipients</p>
+    <p>Acceptance Rates</p>
+    <p>Test Scores</p>
+    <p>SAT</p>
+    <p>SAT</p>
+    <p>% By Race/Ethnicity</p>
+    <p>% First Generation</p>
+    <p>% Pell Grant Recipients</p>
+  </div>
+  <div class='cost'>
+    <h1>Cost of Attendance</h1>
+    <p>Average Cost of Attendance</p>
+    <p>Tutiton and Fees</p>
+    <p>Average Net Price, by Income Level</p>
+    <p>Debt at Graduation</p>
+    <p>Estimated monthly loan payments</p>
+  </div>
+  <div class='outcomes'>
+    <h1>Outcome measures</h1>
+    <p>Completions rates for First Time-Full-Time Freshmen</p>
+    <p>200 percent completion rates</p>
+    <p>Post-graduation Earnings (7 years from graduation)</p>
+    <p>Post-graduation Earnings (3 years from graduation)</p>
+    <p>Post-graduation Earnings (1 year from graduation)</p>
+    <p>Share of Former Students Earning Over $25,000</p>
+  </div>
 </div>
-<div class='cost'>
-    <h1>Cost of Attendance</h1>      
-         <p>Average Cost of Attendance</p>
-          <p>Tutiton and Fees</p>
-          <p>Average Net Price, by Income Level</p>
-          <p>Debt at Graduation</p>
-          <p>Estimated monthly loan payments</p>
-</div>
-<div class='outcomes'>
-<h1>Outcome measures</h1>      
-         <p>Completions rates for First Time-Full-Time Freshmen</p>
-          <p>200 percent completion rates</p>
-          <p>Post-graduation Earnings (7 years from graduation)</p>
-          <p>Post-graduation Earnings (3 years from graduation)</p>
-          <p>Post-graduation Earnings (1 year from graduation)</p>
-          <p>Share of Former Students Earning Over $25,000</p>
-</div>
-</div>       
 <div>
- <H1>MAP</H1> 
- <!--     <map ng-transclude class='google-map' center='map.center=[42.374429, -71.118177]'> 
+  <H1>MAP</H1>
+  <!--     <map ng-transclude class='google-map' center='map.center=[42.374429, -71.118177]'> 
   <marker position='marker.position'></marker>
 </map> -->
-  
-<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
-  <H1>MAP</H1> 
-  <ui-gmap-google-map center='[42.374429, -71.118177]' zoom='2'></ui-gmap-google-map>
+
+
 </div>
 
 <div class="results">
   <div ng-if="searchQuery">
 
     <dl ng-repeat="schools in schoolFound.results">
-    <div class="card" style="width: 20rem;">
-      <h4 class="card-title">{{schools.school.name}}</h4>
-      <p>{{schools.location}}</p>
-       <p>       {{schools.location.lon}}       </p>
-            <p>       {{schools.location.lat}}       </p>
-      <div class="card-footer">
-   
-         <a href=" {{schools.school.school_url}}">Link</a>
-  </div>
+      <div class="schoolResults">
+        <div class="schoolHeader">
+          <h2>{{schools.school.name}}</h2>
+          <p>{{schools.school.city}}, {{schools.school.state}}</p>
+        </div>
+        <div class="schoolMap">
+          <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+        </div>
+        <div class="schoolLink">
+          <a href=" {{schools.school.school_url}}">Link</a>
+        </div>
+
+        <div class="schoolDetails">
+          <div class="schoolAcceptance">
+            <p> Admissions rate: {{schools.2014.admissions.sat_scores.average.overall}}</p>
+          </div>
+          <div class="schoolTest">
+            <div class="schoolTestSAT">
+              <p>SAT: {{schools.2014.admissions.sat_scores.average.overall}}</p>
+            </div>
+            <div class="schoolTestACT">
+              <p>ACT: {{schools.2014.admissions.act_scores.average.overall}}</p>
+            </div>
+          </div>
+          <div class="schoolCost">
+            <p>Cost Attendance: {{schools.2014.cost.attendance.academic_year}}</p>
+            <!--           Issue with program costs -->
+            <p>Average Net Cost: {{schools.2014.cost.attendance.academic_year}}</p>
+            <p>Discount Rate: ?</p>
+          </div>
+          <div class="schoolDebt">
+            <p>Debt at Graduation: {{schools.2014.aid.median_debt.completers.overall}}</p>
+          </div>
+
+          <div class="schoolCompletions"></div>
+          <p>150% completion rate:
+            {{schools.2014.completion.completion_rate_4yr_150nt}}</p>
+          <div class="schoolOutcomes"></div>
+          <p>150% completion rate:
+            {{schools.2012.earnings.10_yrs_after_entry.median}}</p>
+         
+          <div>Compare</div>
+
+
+
+
+        </div>
+
+
       </div>
-    
-    
-
-  </div> 
   </div>
-   
-    <!--     <div class="demo-card">
-      <div class="card">
-        <div class="card-header">
-          This is a card header
-        </div>
-        <img class="card-img-top" src="http://placekitten.com/500/200">
-        <div class="card-block">
-          <h4 class="card-title">University Name</h4>
-          <h6 class="card-subtitle text-muted">Support card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div>
-        <div class="card-block">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">School link</a>
-        </div>
-        <div class="card-block">
-          <a href="#" class="btn btn-primary">Save</a>
-        </div>
-        <div class="card-block">
-          <a href="#" class="btn btn-primary">Get more info</a>
-        </div>
 
-        <div class="card-footer text-muted">
-          This is a card footer
-        </div>
-      </div>
-    </div> -->
 
-  <!-- 
+
+</div>
+</div>
+
+
+
+<!-- 
   <div class="saved grid">
      <div>
   <H1>Grid test unlikely to work </H1>
@@ -172,4 +180,3 @@ Integrate slider
   <H1>Grid test unlikely to work 2 </H1>
 <div id="grid1" ui-grid="{ data: schoolsFind.results.school.name }" class="grid"></div>  
 </div> -->
-
