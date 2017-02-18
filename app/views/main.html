@@ -138,7 +138,7 @@ Integrate slider
           <div class="schoolCost">
             <p>Cost Attendance: {{schools["2014"].cost.attendance.academic_year}}</p>
             <!--           Issue with program costs -->
-             <p>Average Net Cost: {{schools["2014"].cost.attendance.academic_year}}</p>
+             <p>Average Net Cost: {{schools["2014"].cost.avg_net_price.overall}}</p>
             <p>Discount Rate: ?</p>
           </div>
           <div class="schoolDebt">
@@ -150,7 +150,7 @@ Integrate slider
             {{schools["2014"].completion.completion_rate_4yr_150nt}}</p>
           <div class="schoolOutcomes"></div>
           <p>150% completion rate:
-            {{schools["2012"].earnings.10_yrs_after_entry.median}}</p>
+            {{schools["2012"].earnings["10_yrs_after_entry"].median}}</p>
          
           <div>Compare</div> 
 
