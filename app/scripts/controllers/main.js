@@ -24,12 +24,7 @@ $scope.findSchools = function() {
         alert($scope.selectedItem);
     }
  $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
-//  $scope.keys = ["id","school_url"];
-//     $scope.labels = {
-//         ID: "ID",
-//       school_url:"school_url"
-//     };
-//   ['uiGmapgoogle-maps']
-//   $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+
+  $scope.acceptanceSlider = 100;
   });
 

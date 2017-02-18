@@ -20,6 +20,7 @@ angular
     'ngMaps',
     'ngTouch',
     'ui.grid',
+    'rzModule',
 //     'ngstorage',
     'uiGmapgoogle-maps'
 //     'ngMap'
