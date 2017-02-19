@@ -24,7 +24,9 @@ angular.module('collegeScorecardApp')
     columnDefs: [
 //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
 //         { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.schoolFound.results.school.name}} </div>' },
-      { name: 'results.school.name' },
+      { name: 'schoolFound.results.school.name' },
+      { name: 'schoolFound.results' },
+      
     ],
     data:$scope.schoolFound 
   };
