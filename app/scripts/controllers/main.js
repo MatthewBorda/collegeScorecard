@@ -22,8 +22,8 @@ angular.module('collegeScorecardApp')
       //Define data as results      
     $scope.saveSchool = function(schoolResults) {
       var schoolData = {
-        'name': schoolResults.results.school.name,
-        'id': schoolResults.results.id
+        'name': schoolResults.school.name,
+        'id': schoolResults.id
 
       };
       if (!$localStorage.savedSchools) {
@@ -32,7 +32,7 @@ angular.module('collegeScorecardApp')
 
         var save = true; // Initialize the save decision variable.
         for (var i = 0; i < $localStorage.savedSchools.length; i++) {
-          if ($localStorage.savedSchools[i].id == schoolResults.results.id) {
+          if ($localStorage.savedSchools[i].id == schoolResults.id) {
             save = false;
           }
         }
@@ -43,6 +43,8 @@ angular.module('collegeScorecardApp')
         }
       }
     };
+  
+  
     $scope.gridOptions = {
       columnDefs: [
         //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
