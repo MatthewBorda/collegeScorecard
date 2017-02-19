@@ -32,11 +32,27 @@ angular.module('collegeScorecardApp')
     };
 
 //grid controls
-  $scope.myData = [
-        {
-            "firstName": "Cox",
-            "lastName": "Carney"
-        }];
+ $scope.myData = [
+    {
+        "firstName": "Cox",
+        "lastName": "Carney",
+        "company": "Enormo",
+        "employed": true
+    },
+    {
+        "firstName": "Lorraine",
+        "lastName": "Wise",
+        "company": "Comveyer",
+        "employed": false
+    },
+    {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    }
+];
+
 // Slider controls
     $scope.acceptanceSlider = {
       minValue: 0,
