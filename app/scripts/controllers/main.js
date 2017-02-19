@@ -7,30 +7,54 @@
  * # MainCtrl
  * Controller of the collegeScorecardApp
  , ['ui.grid']*/
+
+//LOCAL STORAGE ROUTE 
 angular.module('collegeScorecardApp')
-  .controller('MainCtrl', function($scope, search) {
+  .controller('MainCtrl', function($scope, search, $localStorage) {
     $scope.schoolsFound = search.find()
 
     $scope.findSchools = function() {
-      $scope.schoolFound = search.find({
-        query: $scope.school
-      });
-      $scope.searchQuery = $scope.school;
-    }
-//Define data as results      
- 
-  $scope.gridOptions = {
-    columnDefs: [
-//       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
-//         { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.schoolFound.results.school.name}} </div>' },
-      { name: 'schoolFound.results.school.name' },
-      { name: 'schoolFound.results' },
-      
-    ],
-    data:search.find()
-  };
-//Filters 
-  $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
+        $scope.schoolFound = search.find({
+          query: $scope.school
+        });
+        $scope.searchQuery = $scope.school;
+      }
+      //Define data as results      
+    $scope.saveSchool = function(schoolResults) {
+      var schoolData = {
+        'name': schoolResults.results.school.name,
+        'id': schoolResults.results.id
+
+      };
+      if (!$localStorage.savedSchools) {
+        $localStorage.savedSchools = [schoolData];
+      } else {
+
+        var save = true; // Initialize the save decision variable.
+        for (var i = 0; i < $localStorage.savedSchools.length; i++) {
+          if ($localStorage.savedSchools[i].id == schoolResults.results.id) {
+            save = false;
+          }
+        }
+        if (save == true) {
+          $localStorage.savedSchools.push(schoolResults);
+        } else {
+          console.log('School already saved');
+        }
+      }
+    };
+    $scope.gridOptions = {
+      columnDefs: [
+        //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
+        //         { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.schoolFound.results.school.name}} </div>' },
+        {name: 'name'}, 
+        {name: 'id'},
+
+      ],
+      data: $localStorage
+    };
+    //Filters 
+    $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
     $scope.degreeselected = function(item) {
       $scope.selectedItem = item;
       alert($scope.selectedItem);
@@ -43,30 +67,30 @@ angular.module('collegeScorecardApp')
       zoom: 8
     };
 
-//grid controls
+    //grid controls
 
-//   $scope.myData = [
-//     {
-//         "firstName": "Cox",
-//         "lastName": "Carney",
-//         "company": "Enormo",
-//         "employed": true
-//     },
-//     {
-//         "firstName": "Lorraine",
-//         "lastName": "Wise",
-//         "company": "Comveyer",
-//         "employed": false
-//     },
-//     {
-//         "firstName": "Nancy",
-//         "lastName": "Waters",
-//         "company": "Fuelton",
-//         "employed": false
-//     }
-// ];
-//
-// Slider controls
+    //   $scope.myData = [
+    //     {
+    //         "firstName": "Cox",
+    //         "lastName": "Carney",
+    //         "company": "Enormo",
+    //         "employed": true
+    //     },
+    //     {
+    //         "firstName": "Lorraine",
+    //         "lastName": "Wise",
+    //         "company": "Comveyer",
+    //         "employed": false
+    //     },
+    //     {
+    //         "firstName": "Nancy",
+    //         "lastName": "Waters",
+    //         "company": "Fuelton",
+    //         "employed": false
+    //     }
+    // ];
+    //
+    // Slider controls
     $scope.acceptanceSlider = {
       minValue: 0,
       maxValue: 100,
@@ -143,7 +167,7 @@ angular.module('collegeScorecardApp')
       minValue: 0,
       maxValue: 100000,
       options: {
-      
+
         floor: 0,
         ceil: 100000,
         step: 1000,
@@ -206,43 +230,43 @@ angular.module('collegeScorecardApp')
     };
 
     $scope.earning7Slider = {
-    minValue: 0,
-    maxValue: 100,
-    options: {
+      minValue: 0,
+      maxValue: 100,
+      options: {
         floor: 0,
         ceil: 100,
         step: 1,
         minRange: 10,
         maxRange: 100,
         pushRange: true
-    }
-};
+      }
+    };
 
     $scope.earning3Slider = {
-    minValue: 0,
-    maxValue: 100,
-    options: {
+      minValue: 0,
+      maxValue: 100,
+      options: {
         floor: 0,
         ceil: 100,
         step: 1,
         minRange: 10,
         maxRange: 100,
         pushRange: true
-    }
-};
+      }
+    };
 
     $scope.earning1Slider = {
-    minValue: 0,
-    maxValue: 100,
-    options: {
+      minValue: 0,
+      maxValue: 100,
+      options: {
         floor: 0,
         ceil: 100,
         step: 1,
         minRange: 10,
         maxRange: 100,
         pushRange: true
-    }
-};
+      }
+    };
 
 
   });
