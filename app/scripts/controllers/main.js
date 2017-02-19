@@ -23,8 +23,10 @@ angular.module('collegeScorecardApp')
   $scope.gridOptions = {
     columnDefs: [
 //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
-        { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ row.schoolFound.results.school.name}} </div>' },
-    ]
+//         { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.schoolFound.results.school.name}} </div>' },
+      { name: 'results.school.name' },
+    ],
+    data:$scope.schoolFound 
   };
 //Filters 
   $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
