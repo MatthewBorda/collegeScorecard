@@ -18,14 +18,13 @@ angular.module('collegeScorecardApp')
       $scope.searchQuery = $scope.school;
 
     }
-  var schoolData = [];
-for(var key in $scope.schoolsFound){
- if( !$scope.schoolsFound.hasOwnProperty(key)|| // skip prototype extensions
-   !$scope.schoolsFound[key].hasOwnProperty("accountNo") //skip non account objects
- ) continue; 
- schoolData.push($scope.schoolsFound[key]);
-  }
-    $scope.myData = schoolData;
+ 
+  $scope.myData = {
+    columnDefs: [
+      { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
+
+    ]
+  };
 //Filters 
   $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
     $scope.degreeselected = function(item) {
