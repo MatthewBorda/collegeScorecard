@@ -18,11 +18,12 @@ angular.module('collegeScorecardApp')
       $scope.searchQuery = $scope.school;
 
     }
- 
-  $scope.myData = {
+//Define data as results      
+ $scope.gridOptions.data =  $scope.schoolsFound.results;
+  $scope.gridOptions = {
     columnDefs: [
-      { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
-
+//       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
+        { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.school.name}} </div>' },
     ]
   };
 //Filters 
