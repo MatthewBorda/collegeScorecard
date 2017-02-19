@@ -159,6 +159,11 @@ Integrate slider
 <div class="results">
   <div ng-if="searchQuery">
 
+  <div class="saved grid">
+     <div>
+  <H1>Grid test unlikely to work </H1>
+<div id="grid1" ui-grid="{ data: schoolsFound.results.school }" class="grid"></div>  
+</div>
     <dl ng-repeat="schools in schoolFound.results">
       <div class="container col-xs-12 col-sm-3 col-md-3 col-lg-2 col-lg-2 schoolResults">
         
@@ -221,13 +226,4 @@ Integrate slider
 
 
 
-<!-- 
-  <div class="saved grid">
-     <div>
-  <H1>Grid test unlikely to work </H1>
-<div id="grid1" ui-grid="{ data: schoolsFound.results.school.name }" class="grid"></div>  
-</div>
-      <div>
-  <H1>Grid test unlikely to work 2 </H1>
-<div id="grid1" ui-grid="{ data: schoolsFind.results.school.name }" class="grid"></div>  
-</div> -->
+

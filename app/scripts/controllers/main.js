@@ -108,7 +108,7 @@ angular.module('collegeScorecardApp')
       minValue: 0,
       maxValue: 100000,
       options: {
-        showTicksValues: true,
+      
         floor: 0,
         ceil: 100000,
         step: 1000,
