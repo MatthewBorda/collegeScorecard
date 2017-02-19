@@ -16,7 +16,6 @@ angular.module('collegeScorecardApp')
         query: $scope.school
       });
       $scope.searchQuery = $scope.school;
-
     }
 //Define data as results      
  
@@ -28,7 +27,7 @@ angular.module('collegeScorecardApp')
       { name: 'schoolFound.results' },
       
     ],
-    data:$scope.schoolFound 
+    data:search.find()
   };
 //Filters 
   $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
