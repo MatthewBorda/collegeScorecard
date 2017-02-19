@@ -16,6 +16,15 @@ angular.module('collegeScorecardApp')
         query: $scope.school
       });
       $scope.searchQuery = $scope.school;
+  var schoolData = [];
+for(var key in $scope.findSchools){
+ if( !$scope.findSchools.hasOwnProperty(key)|| // skip prototype extensions
+   !$scope.findSchools[key].hasOwnProperty("accountNo") //skip non account objects
+ ) continue; 
+ schoolData.push($scope.findSchools[key]);
+  
+}
+      $scope.myData = schoolData;
     }
 
     $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
@@ -32,27 +41,28 @@ angular.module('collegeScorecardApp')
     };
 
 //grid controls
- $scope.myData = [
-    {
-        "firstName": "Cox",
-        "lastName": "Carney",
-        "company": "Enormo",
-        "employed": true
-    },
-    {
-        "firstName": "Lorraine",
-        "lastName": "Wise",
-        "company": "Comveyer",
-        "employed": false
-    },
-    {
-        "firstName": "Nancy",
-        "lastName": "Waters",
-        "company": "Fuelton",
-        "employed": false
-    }
-];
 
+//   $scope.myData = [
+//     {
+//         "firstName": "Cox",
+//         "lastName": "Carney",
+//         "company": "Enormo",
+//         "employed": true
+//     },
+//     {
+//         "firstName": "Lorraine",
+//         "lastName": "Wise",
+//         "company": "Comveyer",
+//         "employed": false
+//     },
+//     {
+//         "firstName": "Nancy",
+//         "lastName": "Waters",
+//         "company": "Fuelton",
+//         "employed": false
+//     }
+// ];
+//
 // Slider controls
     $scope.acceptanceSlider = {
       minValue: 0,
