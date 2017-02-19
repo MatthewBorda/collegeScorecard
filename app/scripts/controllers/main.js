@@ -31,7 +31,13 @@ angular.module('collegeScorecardApp')
       zoom: 8
     };
 
-
+//grid controls
+  $scope.myData = [
+        {
+            "firstName": "Cox",
+            "lastName": "Carney"
+        }];
+// Slider controls
     $scope.acceptanceSlider = {
       minValue: 0,
       maxValue: 100,
