@@ -19,42 +19,42 @@ angular.module('collegeScorecardApp')
         });
         $scope.searchQuery = $scope.school;
       }
-      //Define data as results      
-//     $scope.saveSchool = function(schoolResults) {
-//       var schoolData = {
-//         'name': schoolResults.school.name,
-//         'id': schoolResults.id
+//       Define data as results      
+    $scope.saveSchool = function(schoolResults) {
+      var schoolData = {
+        'name': schoolResults.schools.school.name,
+        'id': schoolResults.schools.school.id
 
-//       };
-//       if (!$localStorage.savedSchools) {
-//         $localStorage.savedSchools = [schoolData];
-//       } else {
+      };
+      if (!$localStorage.savedSchools) {
+        $localStorage.savedSchools = [schoolData];
+      } else {
 
-//         var save = true; // Initialize the save decision variable.
-//         for (var i = 0; i < $localStorage.savedSchools.length; i++) {
-//           if ($localStorage.savedSchools[i].id == schoolResults.id) {
-//             save = false;
-//           }
-//         }
-//         if (save == true) {
-//           $localStorage.savedSchools.push(schoolResults);
-//         } else {
-//           console.log('School already saved');
-//         }
-//       }
-//     };
-  
-  
-    $scope.gridOptions = {
-      columnDefs: [
-        //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
-        //         { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.schoolFound.results.school.name}} </div>' },
-        {name: 'name'}, 
-        {name: 'id'}
-
-      ],
-      data: $localStorage
+        var save = true; // Initialize the save decision variable.
+        for (var i = 0; i < $localStorage.savedSchools.length; i++) {
+          if ($localStorage.savedSchools[i].id == schoolResults.schools.school.id) {
+            save = false;
+          }
+        }
+        if (save == true) {
+          $localStorage.savedSchools.push(schoolResults);
+        } else {
+          console.log('School already saved');
+        }
+      }
     };
+  
+  
+//     $scope.gridOptions = {
+//       columnDefs: [
+//         //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
+//         //         { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.schoolFound.results.school.name}} </div>' },
+//         {name: 'name'}, 
+//         {name: 'id'}
+
+//       ],
+//       data: $localStorage
+//     };
     //Filters 
     $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
     $scope.degreeselected = function(item) {
