@@ -20,11 +20,11 @@ angular.module('collegeScorecardApp')
 //         $scope.searchQuery = $scope.school;
 //       }
 //       Define data as results      
-$scope.schoolsFound = search.find()
- $scope.findSchools = function() {
-        $scope.schoolFound = search.find();    
- }
-
+// $scope.schoolsFound = search.find()
+//  $scope.findSchools = function() {
+//         $scope.schoolFound = search.find();    
+//  }
+$scope.search=search.find()
   $scope.saveSchool = function(schoolResults) {
       var schoolData = {
         'name': schoolResults.schools.school.name,
