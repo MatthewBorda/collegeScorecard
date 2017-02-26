@@ -146,7 +146,7 @@ Integrate slider
   
   <div>
     <ul>
-  <li ng-repeat="schools in search.results | school.name:query">
+  <li ng-repeat="schools in search.results | filter:query">
    {{schools.school.name}}
   </li>
 </ul>
