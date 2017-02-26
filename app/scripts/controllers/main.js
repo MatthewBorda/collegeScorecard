@@ -19,11 +19,11 @@ angular.module('collegeScorecardApp')
         });
         $scope.searchQuery = $scope.school;
       }
-//      Define data as results      
-$scope.schoolsFound = search.find()
- $scope.findSchools = function() {
-        $scope.schoolFound = search.find();    
- }
+// //      Define data as results      
+// $scope.schoolsFound = search.find()
+//  $scope.findSchools = function() {
+//         $scope.schoolFound = search.find();    
+//  }
 
   
 
