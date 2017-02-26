@@ -139,13 +139,13 @@ Integrate slider
   type="text" 
   placeholder="Type to filter" 
   ng-model="schoolName" 
-  ng-change="search.updateSchool(schoolName);">
+  ng-change="search.updateSchool(schoolFilter);">
     
   </div>
   
   <div>
     <ul>
-  <li ng-repeat="schools in search.results | schoolName:schoolName">
+  <li ng-repeat="schools in search.filteredSchools">
    {{schools.school.name}}
   </li>
 </ul>
