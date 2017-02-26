@@ -205,26 +205,8 @@ Integrate slider
 
   <div class="results">
     <div ng-if="searchQuery">
- <dl dir-paginate="schools in schoolFound.results | itemsPerPage:5 ">
-    <h4>{{schools.school.name}}</h4>
-       <dir-pagination-controls
-       max-size="5"
-       direction-links="true"
-       boundary-links="true" >
-    </dir-pagination-controls>
-            </div>
-          </div>
-   
-  <!-- 
-  <div class="saved grid">
-    <div>
-      <H1>Local storage</H1>
-      <div id="grid1" ui-grid="gridOptions" class="grid"></div>
-    </div>
-  </div>
-</div>  -->
-
-<!--       <dl ng-repeat="schools in schoolFound.results">
+ <div dir-paginate="schools in schoolFound.results | itemsPerPage:5 ">
+ 
         <div class="container col-xs-12 col-sm-4 col-md-4 col-lg-4 col-lg-4 schoolResults">
 
           <div class="row schoolHeader">
@@ -236,7 +218,7 @@ Integrate slider
 <!--             <div class="schoolMap">
               <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
             </div> -->
-<!--          </div>
+          </div>
           <div class="schoolLink">
             <a href=" {{schools.school.school_url}}">Link</a>
           </div>
@@ -280,4 +262,21 @@ Integrate slider
      </div>
     </div>
   </div>
- -->
+ 
+      </div>
+        <dir-pagination-controls
+       max-size="3"
+       direction-links="true"
+       boundary-links="true" >
+    </dir-pagination-controls>
+            </div>
+          </div>
+   
+  <!-- 
+  <div class="saved grid">
+    <div>
+      <H1>Local storage</H1>
+      <div id="grid1" ui-grid="gridOptions" class="grid"></div>
+    </div>
+  </div>
+</div>  -->
