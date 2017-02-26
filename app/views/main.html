@@ -225,7 +225,7 @@ Integrate slider
 
           <div class="schoolDetails">
             <div class="schoolAcceptance lineAbove">
-              <p> <b>{{schools["2014"].admissions.admission_rate.average.overall}}</b> applicants admitted <span class="glyphicon glyphicon-info-sign"></span></p>
+              <p> <b>{{schools["2014"].admissions.admission_rate.average.overall}}</b><span class="empty" ng-show="!schools['2014'].admissions.admission_rate.average.overall">---</span> applicants admitted <span class="glyphicon glyphicon-info-sign"></span></p>
             </div>
             <div class="schoolTestSAT lineAbove">
                 <p><b>{{schools["2014"].admissions.sat_scores.average.overall}}</b> average SAT score</p>
