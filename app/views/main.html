@@ -136,7 +136,7 @@ Integrate slider
    A {{search.filteredSchools.metadata.total}}
    B {{search.metadata.total.filteredSchools}}
   </p>
-  <div>
+<!--   <div>
     <input 
   type="text" 
   placeholder="Type to filter" 
@@ -144,11 +144,11 @@ Integrate slider
   ng-change="search.updateSchool(schoolFilter);">
     
   </div>
-  
+   -->
   <div>
     <ul>
-  <li ng-repeat="schools in search.filteredSchools">
-   {{schools.results.school.name}}
+  <li ng-repeat="schools in search.results">
+   {{schools.school.name}}
   </li>
 </ul>
   </div>

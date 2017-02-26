@@ -30,11 +30,11 @@ angular.module('collegeScorecardApp')
 
 //   Filters
     // updateUsers will call `testFilter` ourselves
-  this.updateSchool = function (schoolName) {
-    this.filteredSchools = $filter('schoolFilter')($scope.search,schoolName);
-  };
+//   this.updateSchool = function (schoolName) {
+//     this.filteredSchools = $filter('schoolFilter')($scope.search,schoolName);
+//   };
   
-  this.filteredSchools = $scope.search;
+//   this.filteredSchools = $scope.search;
 
 
 //   Local storage
