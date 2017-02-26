@@ -35,7 +35,7 @@ angular.module('collegeScorecardApp')
   
   this.filteredSchools = search.results.school.name;
 
-}
+
 //   Local storage
   $scope.saveSchool = function(schoolResults) {
       var schoolData = {
