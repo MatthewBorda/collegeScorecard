@@ -6,193 +6,201 @@ Integrate slider
 
   <div class="searchFields">
     <div class="mainSearch container">
-      <div class="pull-left">
-        <p>Name</p>
-        <div class="pull-right">
-          <button type="submit" class="btn btn-link" ng-click="showName = !showName">
-    <span class="glyphicon glyphicon-chevron-down"></span>
-</button>
+      <div class="row">
+        <div class='xs-col-6 sm-col-6 md-col-6 lg-col-6'>
+          <h2>Name</h2>
         </div>
+        <div class='xs-col-6 sm-col-6 md-col-6 lg-col-6'>
+          <button type="submit" class="btn btn-link" ng-click="showName = !showName">
+          <span class="glyphicon glyphicon-chevron-down"></span></button>
+        </div>
+
       </div>
-      <div class="clearfix"></div>
     </div>
-    <div class="row" ng-show="showName">
+    <div class="container" ng-show="showName">
+       <div class='xs-col-12 sm-col-12 md-col-12 lg-col-12'>
       <p class="lead">
         <div ng-init="school='Seattle University'">
           <label for="school"><input type="text" name="school" ng-model="school"></label>
       </p>
       </div>
-
-
-
-
     </div>
-    <div class='degreeProgram'>
-      <div class="dropdown">
-        <h1>Degree/Program</h1>
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+
+
+      <h1>Text on the left</h1>
+    </div>
+    <div class="pull-right">
+      <h3 class="text-right">This to the right but on the same line</h3>
+    </div>
+    <div class="clearfix"></div>
+
+  </div>
+  <div class='degreeProgram'>
+    <div class="dropdown">
+      <h1>Degree/Program</h1>
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Degree
           <span class="caret"></span>
       </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Program
           <span class="caret"></span>
       </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
-        </ul>
-      </div>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
+      </ul>
     </div>
-    <div class='Location'>
-      <h1>Location</h1>
-      <div class="dropdown">
+  </div>
+  <div class='Location'>
+    <h1>Location</h1>
+    <div class="dropdown">
 
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             State
           <span class="caret"></span>
       </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Region
           <span class="caret"></span>
       </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
-        </ul>
-      </div>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
+      </ul>
+    </div>
+    <div class="input-group">
+      <p>Enter a Zip code</p>
+      <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
       <div class="input-group">
-        <p>Enter a Zip code</p>
+        <p>Mile radius</p>
         <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-        <div class="input-group">
-          <p>Mile radius</p>
-          <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-        </div>
       </div>
     </div>
-    <div class='likeMe'>
-      <h1> Student Profile
+  </div>
+  <div class='likeMe'>
+    <h1> Student Profile
     
   </h1>
-      <p>Acceptance Rates</p>
-      <div>
-        <rzslider rz-slider-model="acceptanceSlider.minValue" rz-slider-high="acceptanceSlider.maxValue" rz-slider-options="acceptanceSlider.options"></rzslider>
-
-      </div>
-      <p>Test Scores</p>
-      <p>SAT</p>
-      <rzslider rz-slider-model="SATslider.minValue" rz-slider-high="SATslider.maxValue" rz-slider-options="SATslider.options"></rzslider>
-      <p>ACT</p>
-      <rzslider rz-slider-model="ACTslider.minValue" rz-slider-high="ACTslider.maxValue" rz-slider-options="ACTslider.options"></rzslider>
-      <p>% By Race/Ethnicity</p>
-      <rzslider rz-slider-model="raceSlider.minValue" rz-slider-high="raceSlider.maxValue" rz-slider-options="raceSlider.options"></rzslider>
-      <p>% First Generation</p>
-      <rzslider rz-slider-model="genSlider.minValue" rz-slider-high="genSlider.maxValue" rz-slider-options="genSlider.options"></rzslider>
-      <p>% Pell Grant Recipients</p>
-      <rzslider rz-slider-model="pellSlider.minValue" rz-slider-high="pellSlider.maxValue" rz-slider-options="pellSlider.options"></rzslider>
-
+    <p>Acceptance Rates</p>
+    <div>
+      <rzslider rz-slider-model="acceptanceSlider.minValue" rz-slider-high="acceptanceSlider.maxValue" rz-slider-options="acceptanceSlider.options"></rzslider>
 
     </div>
-    <div class='cost'>
-      <h1>Cost of Attendance</h1>
-      <p>Average Cost of Attendance</p>
-      <rzslider rz-slider-model="costSlider.minValue" rz-slider-high="costSlider.maxValue" rz-slider-options="costSlider.options"></rzslider>
-
-      <p>Tutiton and Fees</p>
-      <rzslider rz-slider-model="tuitionSlider.minValue" rz-slider-high="tuitionSlider.maxValue" rz-slider-options="tuitionSlider.options"></rzslider>
-
-      <p>Average Net Price, by Income Level</p>
-      <rzslider rz-slider-model="priceSlider.minValue" rz-slider-high="priceSlider.maxValue" rz-slider-options="priceSlider.options"></rzslider>
-      <p>Debt at Graduation</p>
-      <rzslider rz-slider-model="debtSlider.minValue" rz-slider-high="debtSlider.maxValue" rz-slider-options="debtSlider.options"></rzslider>
-      <p>Estimated monthly loan payments</p>
-      <rzslider rz-slider-model="loanSlider.minValue" rz-slider-high="loanSlider.maxValue" rz-slider-options="loanSlider.options"></rzslider>
+    <p>Test Scores</p>
+    <p>SAT</p>
+    <rzslider rz-slider-model="SATslider.minValue" rz-slider-high="SATslider.maxValue" rz-slider-options="SATslider.options"></rzslider>
+    <p>ACT</p>
+    <rzslider rz-slider-model="ACTslider.minValue" rz-slider-high="ACTslider.maxValue" rz-slider-options="ACTslider.options"></rzslider>
+    <p>% By Race/Ethnicity</p>
+    <rzslider rz-slider-model="raceSlider.minValue" rz-slider-high="raceSlider.maxValue" rz-slider-options="raceSlider.options"></rzslider>
+    <p>% First Generation</p>
+    <rzslider rz-slider-model="genSlider.minValue" rz-slider-high="genSlider.maxValue" rz-slider-options="genSlider.options"></rzslider>
+    <p>% Pell Grant Recipients</p>
+    <rzslider rz-slider-model="pellSlider.minValue" rz-slider-high="pellSlider.maxValue" rz-slider-options="pellSlider.options"></rzslider>
 
 
-    </div>
+  </div>
+  <div class='cost'>
+    <h1>Cost of Attendance</h1>
+    <p>Average Cost of Attendance</p>
+    <rzslider rz-slider-model="costSlider.minValue" rz-slider-high="costSlider.maxValue" rz-slider-options="costSlider.options"></rzslider>
 
-    <div class='outcomes'>
-      <h1>Outcome measures</h1>
+    <p>Tutiton and Fees</p>
+    <rzslider rz-slider-model="tuitionSlider.minValue" rz-slider-high="tuitionSlider.maxValue" rz-slider-options="tuitionSlider.options"></rzslider>
 
-      <p>200 percent completion rates</p>
-      <rzslider rz-slider-model="completionSlider.minValue" rz-slider-high="completionSlider.maxValue" rz-slider-options="loanSlider.options"></rzslider>
-      <p>Post-graduation Earnings (7 years from graduation)</p>
-      <rzslider rz-slider-model="earning7Slider.minValue" rz-slider-high="earning7Slider.maxValue" rz-slider-options="earning7Slider.options"></rzslider>
-      <p>Post-graduation Earnings (3 years from graduation)</p>
-      <rzslider rz-slider-model="earning3Slider.minValue" rz-slider-high="earning3Slider.maxValue" rz-slider-options="earning3Slider.options"></rzslider>
-      <p>Post-graduation Earnings (1 year from graduation)</p>
-      <rzslider rz-slider-model="earning1Slider.minValue" rz-slider-high="earning1Slider.maxValue" rz-slider-options="earning1Slider.options"></rzslider>
+    <p>Average Net Price, by Income Level</p>
+    <rzslider rz-slider-model="priceSlider.minValue" rz-slider-high="priceSlider.maxValue" rz-slider-options="priceSlider.options"></rzslider>
+    <p>Debt at Graduation</p>
+    <rzslider rz-slider-model="debtSlider.minValue" rz-slider-high="debtSlider.maxValue" rz-slider-options="debtSlider.options"></rzslider>
+    <p>Estimated monthly loan payments</p>
+    <rzslider rz-slider-model="loanSlider.minValue" rz-slider-high="loanSlider.maxValue" rz-slider-options="loanSlider.options"></rzslider>
 
-      <p>
-        <button class="btn btn-lg btn-primary" ng-click="findSchools()">Find Schools</button>
-      </p>
-    </div>
+
   </div>
 
-  <div class="results">
-    <div ng-if="searchQuery">
+  <div class='outcomes'>
+    <h1>Outcome measures</h1>
 
-      <dl ng-repeat="schools in schoolFound.results">
-        <div class="container col-xs-12 col-sm-3 col-md-3 col-lg-2 col-lg-2 schoolResults">
+    <p>200 percent completion rates</p>
+    <rzslider rz-slider-model="completionSlider.minValue" rz-slider-high="completionSlider.maxValue" rz-slider-options="loanSlider.options"></rzslider>
+    <p>Post-graduation Earnings (7 years from graduation)</p>
+    <rzslider rz-slider-model="earning7Slider.minValue" rz-slider-high="earning7Slider.maxValue" rz-slider-options="earning7Slider.options"></rzslider>
+    <p>Post-graduation Earnings (3 years from graduation)</p>
+    <rzslider rz-slider-model="earning3Slider.minValue" rz-slider-high="earning3Slider.maxValue" rz-slider-options="earning3Slider.options"></rzslider>
+    <p>Post-graduation Earnings (1 year from graduation)</p>
+    <rzslider rz-slider-model="earning1Slider.minValue" rz-slider-high="earning1Slider.maxValue" rz-slider-options="earning1Slider.options"></rzslider>
 
-          <div class="row schoolHeader">
-            <h4>{{schools.school.name}}</h4>
-            <p>{{schools.school.city}}, {{schools.school.state}}</p>
+    <p>
+      <button class="btn btn-lg btn-primary" ng-click="findSchools()">Find Schools</button>
+    </p>
+  </div>
+</div>
 
-            <div class="schoolMap">
-              <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
-            </div>
-          </div>
-          <div class="schoolLink">
-            <a href=" {{schools.school.school_url}}">Link</a>
-          </div>
+<div class="results">
+  <div ng-if="searchQuery">
 
-          <div class="schoolDetails">
-            <div class="schoolAcceptance">
-              <p> Admissions rate: {{schools["2014"].admissions.admission_rate.average.overall}}</p>
-            </div>
-            <div class="schoolTest">
-              <div class="schoolTestSAT">
-                <p>SAT: {{schools["2014"].admissions.sat_scores.average.overall}}</p>
-              </div>
-              <div class="schoolTestACT">
-                <p>ACT: {{schools["2014"].admissions.act_scores.average.overall}}</p>
-              </div>
-            </div>
-            <div class="schoolCost">
-              <p>Cost Attendance: {{schools["2014"].cost.attendance.academic_year}}</p>
-              <!--           Issue with program costs -->
-              <p>Average Net Cost: {{schools["2014"].cost.avg_net_price.overall}}</p>
-              <p>Discount Rate: ?</p>
-            </div>
-            <div class="schoolDebt">
-              <p>Debt at Graduation: {{schools["2014"].aid.median_debt.completers.overall}}</p>
-            </div>
+    <dl ng-repeat="schools in schoolFound.results">
+      <div class="container col-xs-12 col-sm-3 col-md-3 col-lg-2 col-lg-2 schoolResults">
 
-            <div class="schoolCompletions"></div>
-            <p>150% completion rate: {{schools["2014"].completion.completion_rate_4yr_150nt}}
-            </p>
-            <div class="schoolOutcomes"></div>
-            <p>Median Income: {{schools["2012"].earnings["10_yrs_after_entry"].median}}
-            </p>
+        <div class="row schoolHeader">
+          <h4>{{schools.school.name}}</h4>
+          <p>{{schools.school.city}}, {{schools.school.state}}</p>
 
-            <div>
-              <p><button class="btn btn-sm btn-primary" ng-click="saveSchool(schoolFound)">Compare
-</button></p>
-            </div>
+          <div class="schoolMap">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
           </div>
         </div>
-    </div>
+        <div class="schoolLink">
+          <a href=" {{schools.school.school_url}}">Link</a>
+        </div>
+
+        <div class="schoolDetails">
+          <div class="schoolAcceptance">
+            <p> Admissions rate: {{schools["2014"].admissions.admission_rate.average.overall}}</p>
+          </div>
+          <div class="schoolTest">
+            <div class="schoolTestSAT">
+              <p>SAT: {{schools["2014"].admissions.sat_scores.average.overall}}</p>
+            </div>
+            <div class="schoolTestACT">
+              <p>ACT: {{schools["2014"].admissions.act_scores.average.overall}}</p>
+            </div>
+          </div>
+          <div class="schoolCost">
+            <p>Cost Attendance: {{schools["2014"].cost.attendance.academic_year}}</p>
+            <!--           Issue with program costs -->
+            <p>Average Net Cost: {{schools["2014"].cost.avg_net_price.overall}}</p>
+            <p>Discount Rate: ?</p>
+          </div>
+          <div class="schoolDebt">
+            <p>Debt at Graduation: {{schools["2014"].aid.median_debt.completers.overall}}</p>
+          </div>
+
+          <div class="schoolCompletions"></div>
+          <p>150% completion rate: {{schools["2014"].completion.completion_rate_4yr_150nt}}
+          </p>
+          <div class="schoolOutcomes"></div>
+          <p>Median Income: {{schools["2012"].earnings["10_yrs_after_entry"].median}}
+          </p>
+
+          <div>
+            <p><button class="btn btn-sm btn-primary" ng-click="saveSchool(schoolFound)">Compare
+</button></p>
+          </div>
+        </div>
+      </div>
   </div>
-  <!-- 
+</div>
+<!-- 
   <div class="saved grid">
     <div>
       <H1>Local storage</H1>
