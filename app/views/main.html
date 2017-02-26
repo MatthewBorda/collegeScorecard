@@ -6,21 +6,23 @@ Integrate slider
 
   <div class="searchFields">
     <div class="mainSearch container">
-      <div class="row text-left">
-        <h3>School Name</h3>
-
-        <button type="submit" class="btn btn-link" ng-click="showName = !showName">
+      <div class="pull-left">
+        <p>Name</p>
+        <div class="pull-right">
+          <button type="submit" class="btn btn-link" ng-click="showName = !showName">
     <span class="glyphicon glyphicon-chevron-down"></span>
 </button>
+        </div>
       </div>
+      <div class="clearfix"></div>
     </div>
-
     <div class="row" ng-show="showName">
       <p class="lead">
         <div ng-init="school='Seattle University'">
           <label for="school"><input type="text" name="school" ng-model="school"></label>
       </p>
       </div>
+
 
 
 
