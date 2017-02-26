@@ -22,7 +22,8 @@ angular
     'ui.grid',
     'rzModule',
     'ngStorage',
-    'uiGmapgoogle-maps'
+    'uiGmapgoogle-maps',
+    'angularUtils.directives.dirPagination'
 //     'ngMap'
   ])
   .config(function ($routeProvider) {
