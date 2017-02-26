@@ -26,52 +26,53 @@ angular.module('collegeScorecardApp')
 //  }
 // Returns all results
   $scope.search=search.find()
+  
 
 //   Filters
     // updateUsers will call `testFilter` ourselves
   this.updateSchool = function (schoolName) {
-    this.filteredSchools = $filter('schoolFilter')(search.results.school.name);
+    this.filteredSchools = $filter('schoolFilter')($scope.search,schoolName);
   };
   
-  this.filteredSchools = search.results.school.name;
+  this.filteredSchools = $scope.search;
 
 
 //   Local storage
-  $scope.saveSchool = function(schoolResults) {
-      var schoolData = {
-        'name': schoolResults.schools.school.name,
-        'id': schoolResults.schools.id
+//   $scope.saveSchool = function(schoolResults) {
+//       var schoolData = {
+//         'name': schoolResults.schools.school.name,
+//         'id': schoolResults.schools.id
 
-      };
-      if (!$localStorage.savedSchools) {
-        $localStorage.savedSchools = [schoolData];
-      } else {
+//       };
+//       if (!$localStorage.savedSchools) {
+//         $localStorage.savedSchools = [schoolData];
+//       } else {
 
-        var save = true; // Initialize the save decision variable.
-        for (var i = 0; i < $localStorage.savedSchools.length; i++) {
-          if ($localStorage.savedSchools[i].id == schoolResults.schools.id) {
-            save = false;
-          }
-        }
-        if (save == true) {
-          $localStorage.savedSchools.push(schoolResults);
-        } else {
-          console.log('School already saved');
-        }
-      }
-    };
+//         var save = true; // Initialize the save decision variable.
+//         for (var i = 0; i < $localStorage.savedSchools.length; i++) {
+//           if ($localStorage.savedSchools[i].id == schoolResults.schools.id) {
+//             save = false;
+//           }
+//         }
+//         if (save == true) {
+//           $localStorage.savedSchools.push(schoolResults);
+//         } else {
+//           console.log('School already saved');
+//         }
+//       }
+//     };
   
   
-    $scope.gridOptions = {
-      columnDefs: [
-        //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
-        //         { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.schoolFound.results.school.name}} </div>' },
-        {name: 'name'}, 
-        {name: 'id'}
+//     $scope.gridOptions = {
+//       columnDefs: [
+//         //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
+//         //         { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.schoolFound.results.school.name}} </div>' },
+//         {name: 'name'}, 
+//         {name: 'id'}
 
-      ],
-      data: $localStorage
-    };
+//       ],
+//       data: $localStorage
+//     };
     //Filters 
     $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
     $scope.degreeselected = function(item) {
