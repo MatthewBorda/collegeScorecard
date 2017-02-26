@@ -12,7 +12,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+  background-color: #B5BDBF;
+font-family: 'Lato', sans-serif;
 }
+h1 h2 h3 h4 {
+  font-family: 'Montserrat', sans-serif;
+
+}
+
 .grid {
   width: 500px;
   height: 250px;
@@ -94,3 +101,5 @@ body {
 }
 .angular-google-map-container { height: 100px; }
 .google-map { height: 100px; }
+
+

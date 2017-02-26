@@ -10,7 +10,7 @@
 
 //LOCAL STORAGE ROUTE 
 angular.module('collegeScorecardApp')
-  .controller('MainCtrl', function($scope, search, $localStorage, $filter) {
+  .controller('MainCtrl', function($scope, search, $localStorage) {
     $scope.schoolsFound = search.find()
 
     $scope.findSchools = function() {
