@@ -215,9 +215,9 @@ Integrate slider
             </div>
             <p>{{schools.school.city}}, {{schools.school.state}}</p>
 
-            <div class="schoolMap">
+<!--             <div class="schoolMap">
               <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
-            </div>
+            </div> -->
           </div>
           <div class="schoolLink">
             <a href=" {{schools.school.school_url}}">Link</a>
@@ -225,7 +225,7 @@ Integrate slider
 
           <div class="schoolDetails">
             <div class="schoolAcceptance lineAbove">
-              <p> <b>{{schools["2014"].admissions.admission_rate.average.overall}}</b> applicants admitted </p>
+              <p> <b>{{schools["2014"].admissions.admission_rate.average.overall}}</b> applicants admitted <span class="glyphicon glyphicon-info-sign"></span></p>
             </div>
             <div class="schoolTestSAT lineAbove">
                 <p><b>{{schools["2014"].admissions.sat_scores.average.overall}}</b> average SAT score</p>
@@ -234,21 +234,20 @@ Integrate slider
                 <p><b>{{schools["2014"].admissions.act_scores.average.overall}}</b> average ACT score</p>
               </div>
             <div class="schoolCost lineAbove">
-              <p><b>{{schools["2014"].cost.attendance.academic_year}}</b> average cost of attendance</p>
+              <p><b>{{schools["2014"].cost.attendance.academic_year}}</b> cost of attendance <span class="glyphicon glyphicon-info-sign"></span></p>
             </div>
             <div class="schoolPrice lineAbove"> 
               <p><b>{{schools["2014"].cost.avg_net_price.overall}}</b> average net price</p>
               <p>Discount Rate: ?</p>
             </div>
             <div class="schoolDebt lineAbove">
-              <p> <b>{{schools["2014"].aid.median_debt.completers.overall}}</b> average debt at graduation</p>
+              <p> <b>{{schools["2014"].aid.median_debt.completers.overall}}</b> debt at graduation <span class="glyphicon glyphicon-info-sign"></span></p>
             </div>
             <div class="schoolCompletions lineAbove">
-            <p><b> {{schools["2014"].completion.completion_rate_4yr_150nt}}</b> 150% completion rate</p>
+            <p><b> {{schools["2014"].completion.completion_rate_4yr_150nt}}</b> 150% completion rate <span class="glyphicon glyphicon-info-sign"></span></p>
               </div>
             <div class="schoolOutcomes lineAbove">
-            <p><b>{{schools["2012"].earnings["10_yrs_after_entry"].median}}</b> median income 
-            </p>
+            <p><b>{{schools["2012"].earnings["10_yrs_after_entry"].median}}</b> median income <span class="glyphicon glyphicon-info-sign"></span></p>
             </div>
             <div>
               <p><button class="btn btn-sm btn-primary" ng-click="saveSchool(schoolFound)">Compare

@@ -15,12 +15,18 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 body {
   padding: 0;
-  background-color: #B5BDBF;
+  background-color: #DBDBDB;
 font-family: 'Lato', sans-serif;
+
 }
 
 .schoolResults {
   border:  2px solid #1A281F;
+   text-align: center;
+  background-color: #B5BDBF;
+}
+.schoolHeader {
+ background-color: #838E83
 }
 h1 h2 h3 h4 {
   font-family: 'Montserrat', sans-serif;
