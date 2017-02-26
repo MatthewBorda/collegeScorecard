@@ -8,9 +8,14 @@ Integrate slider
     <div class="mainSearch container">
       <div class="row text-left">
         <h3>School Name</h3>
+        <a href="#" ng-click="showName = !showName" class="btn btn-primary btn-lg">Toggle Name</a>
+<!--         <button type="submit" class="btn btn-link">
+    <span class="glyphicon glyphicon-chevron-down"></span>
+</button> -->
+      </div>
       </div>
       <div>
-        <div class="row">
+        <div class="row" ng-show="showName">
           <p class="lead">
             <div ng-init="school='Seattle University'">
               <label for="school"><input type="text" name="school" ng-model="school"></label>
