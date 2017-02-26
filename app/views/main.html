@@ -5,16 +5,15 @@ Integrate slider
 <div>
 
   <div class="searchFields">
-    <div class="mainSearch container align-middle">
+    <div class="mainSearch container">
       <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6 lg-col-lg-6 align-middle">
+        <div class="col-xs-6 col-sm-6 col-md-6 lg-col-lg-6">
           <h2>Name</h2>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6 lg-col-lg-6">
           <button type="submit" class="btn btn-link" ng-click="showName = !showName">
           <span class="glyphicon glyphicon-chevron-down"></span></button>
         </div>
-
       </div>
     </div>
     <div class="container" ng-show="showName">
@@ -25,13 +24,22 @@ Integrate slider
       </p>
       </div>
     </div>
-
-
-
-  </div>
-  <div class='degreeProgram'>
-    <div class="dropdown">
-      <h1>Degree/Program</h1>
+<!--Degree Program      -->
+    <div class="degreeProgram container">
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 lg-col-lg-6">
+          <h2>Degree/Program</h2>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 lg-col-lg-6">
+          <button type="submit" class="btn btn-link" ng-click="showDegree = !showDegree">
+          <span class="glyphicon glyphicon-chevron-down"></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="container" ng-show="showDegree">
+       <div class="col-xs-6 col-sm-6 col-md-6 lg-col-lg-6">
+ <div class="dropdown">
+      
       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Degree
           <span class="caret"></span>
@@ -48,9 +56,11 @@ Integrate slider
       <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
         <li ng-repeat="a in degree"><a ng-click="degreeselected()">{{a}}</a></li>
       </ul>
+    </div>      </div>
     </div>
-  </div>
-  <div class='Location'>
+<!-- Location     -->
+
+  <div class='location container'>
     <h1>Location</h1>
     <div class="dropdown">
 
@@ -80,7 +90,8 @@ Integrate slider
       </div>
     </div>
   </div>
-  <div class='likeMe'>
+<!-- likeMe     -->
+  <div class='likeMe container'>
     <h1> Student Profile
     
   </h1>
@@ -103,7 +114,8 @@ Integrate slider
 
 
   </div>
-  <div class='cost'>
+<!-- cost   -->
+    <div class='cost container'>
     <h1>Cost of Attendance</h1>
     <p>Average Cost of Attendance</p>
     <rzslider rz-slider-model="costSlider.minValue" rz-slider-high="costSlider.maxValue" rz-slider-options="costSlider.options"></rzslider>
@@ -120,8 +132,8 @@ Integrate slider
 
 
   </div>
-
-  <div class='outcomes'>
+<!-- Outcomes   -->
+    <div class='outcomes container'>
     <h1>Outcome measures</h1>
 
     <p>200 percent completion rates</p>
