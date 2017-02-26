@@ -125,7 +125,7 @@ Integrate slider
     </div>
   </div>
 
-<div class="results">
+  <div class="results">
     <div ng-if="searchQuery">
 
       <dl ng-repeat="schools in schoolFound.results">
@@ -158,7 +158,7 @@ Integrate slider
             <div class="schoolCost">
               <p>Cost Attendance: {{schools["2014"].cost.attendance.academic_year}}</p>
               <!--           Issue with program costs -->
-<p>Average Net Cost: {{schools["2014"].cost.avg_net_price.overall}}</p>
+              <p>Average Net Cost: {{schools["2014"].cost.avg_net_price.overall}}</p>
               <p>Discount Rate: ?</p>
             </div>
             <div class="schoolDebt">
@@ -176,20 +176,11 @@ Integrate slider
               <p><button class="btn btn-sm btn-primary" ng-click="saveSchool(schoolFound)">Compare
 </button></p>
             </div>
-
-
-
-
           </div>
-
-
         </div>
     </div>
-
-
-
-  </div> 
-<!-- 
+  </div>
+  <!-- 
   <div class="saved grid">
     <div>
       <H1>Local storage</H1>
