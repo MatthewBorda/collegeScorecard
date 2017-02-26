@@ -4,7 +4,7 @@ Integrate slider
 
 <div>
 
-<!--   <div class="searchFields">
+  <div class="searchFields">
     <div class="mainSearch">
       <h1>Find a School</h1>
       <p class="lead">
@@ -123,39 +123,9 @@ Integrate slider
 
 
     </div>
-  </div> -->
-<div>
-  <h1>
-    Test to return all
-  </h1>
-  <p>
-  Metadata.total  {{metadata.total}}
-  </p>
-  <p>
-   Search {{search.metadata.total}}
-   A {{search.filteredSchools.metadata.total}}
-   B {{search.metadata.total.filteredSchools}}
-  </p>
-  <div>
-   <form class="form-inline">
-      <input ng-model="query" type="text"
-        placeholder="Filter by" autofocus>
-    </form>
-    
   </div>
-  
-  <div>
-    <ul>
-  <li ng-repeat="schools in search.results | filter:query">
-   {{schools.school.name}}
-  </li>
-</ul>
-  </div>
-<!--    <dl ng-repeat="schools in schoolFound.results">
-     <p>{{schools.school.name}}<p>
-  </div> -->
-  <!-- col-lg-2 -->
-<!--   <div class="results">
+
+<div class="results">
     <div ng-if="searchQuery">
 
       <dl ng-repeat="schools in schoolFound.results">
@@ -188,7 +158,7 @@ Integrate slider
             <div class="schoolCost">
               <p>Cost Attendance: {{schools["2014"].cost.attendance.academic_year}}</p>
               <!--           Issue with program costs -->
-                         <!--           <p>Average Net Cost: {{schools["2014"].cost.avg_net_price.overall}}</p>
+<p>Average Net Cost: {{schools["2014"].cost.avg_net_price.overall}}</p>
               <p>Discount Rate: ?</p>
             </div>
             <div class="schoolDebt">
@@ -218,13 +188,12 @@ Integrate slider
 
 
 
-  </div> -->
+  </div> 
 <!-- 
-
   <div class="saved grid">
     <div>
       <H1>Local storage</H1>
       <div id="grid1" ui-grid="gridOptions" class="grid"></div>
     </div>
   </div>
-</div> -->
+</div>  -->
