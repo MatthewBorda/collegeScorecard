@@ -10,7 +10,7 @@
 
 //LOCAL STORAGE ROUTE 
 angular.module('collegeScorecardApp')
-  .controller('MainCtrl', function($scope, search, $localStorage) {
+  .controller('MainCtrl', function($scope, search, $localStorage, $filter) {
 //     $scope.schoolsFound = search.find()
 
 //     $scope.findSchools = function() {
@@ -24,7 +24,19 @@ angular.module('collegeScorecardApp')
 //  $scope.findSchools = function() {
 //         $scope.schoolFound = search.find();    
 //  }
-$scope.search=search.find()
+// Returns all results
+  $scope.search=search.find()
+
+//   Filters
+    // updateUsers will call `testFilter` ourselves
+  this.updateSchool = function (schoolName) {
+    this.filteredSchools = $filter('schoolFilter')(search.results.school.name);
+  };
+  
+  this.filteredSchools = search.results.school.name;
+
+}
+//   Local storage
   $scope.saveSchool = function(schoolResults) {
       var schoolData = {
         'name': schoolResults.schools.school.name,

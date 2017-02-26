@@ -134,6 +134,21 @@ Integrate slider
   <p>
    Search {{search.metadata.total}}
   </p>
+  <div>
+    <input 
+  type="text" 
+  placeholder="Type to filter" 
+  ng-model="schoolName" 
+  ng-change="search.updateSchool(schoolFilter);">
+  </div>
+  
+  <div>
+    <ul>
+  <li ng-repeat="schools in search.results | schoolFilter">
+   {{schools.school.name}}
+  </li>
+</ul>
+  </div>
 <!--    <dl ng-repeat="schools in schoolFound.results">
      <p>{{schools.school.name}}<p>
   </div> -->
