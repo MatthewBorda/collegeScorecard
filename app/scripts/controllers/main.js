@@ -19,47 +19,32 @@ angular.module('collegeScorecardApp')
         });
         $scope.searchQuery = $scope.school;
       }
-// //      Define data as results      
-// $scope.schoolsFound = search.find()
-//  $scope.findSchools = function() {
-//         $scope.schoolFound = search.find();    
-//  }
 
-  
+    //   Local storage
 
-//   Filters
-    // updateUsers will call `testFilter` ourselves
-//   this.updateSchool = function (schoolName) {
-//     this.filteredSchools = $filter('schoolFilter')($scope.search,schoolName);
-//   };
-  
-//   this.filteredSchools = $scope.search;
+  $scope.saveSchool = function(schoolResults) {
+      var schoolData = {
+        'name': schoolResults.schools.school.name,
+        'id': schoolResults.schools.id
 
+      };
+      if (!$localStorage.savedSchools) {
+        $localStorage.savedSchools = [schoolResults];
+      } else {
 
-//   Local storage
-//   $scope.saveSchool = function(schoolResults) {
-//       var schoolData = {
-//         'name': schoolResults.schools.school.name,
-//         'id': schoolResults.schools.id
-
-//       };
-//       if (!$localStorage.savedSchools) {
-//         $localStorage.savedSchools = [schoolData];
-//       } else {
-
-//         var save = true; // Initialize the save decision variable.
-//         for (var i = 0; i < $localStorage.savedSchools.length; i++) {
-//           if ($localStorage.savedSchools[i].id == schoolResults.schools.id) {
-//             save = false;
-//           }
-//         }
-//         if (save == true) {
-//           $localStorage.savedSchools.push(schoolResults);
-//         } else {
-//           console.log('School already saved');
-//         }
-//       }
-//     };
+        var save = true; // Initialize the save decision variable.
+        for (var i = 0; i < $localStorage.savedSchools.length; i++) {
+          if ($localStorage.savedSchools[i].id == schoolResults.schools.id) {
+            save = false;
+          }
+        }
+        if (save == true) {
+          $localStorage.savedSchools.push(schoolResults);
+        } else {
+          console.log('School already saved');
+        }
+      }
+    };
   
   
 //     $scope.gridOptions = {
