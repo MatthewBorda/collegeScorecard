@@ -11,16 +11,21 @@
 //LOCAL STORAGE ROUTE 
 angular.module('collegeScorecardApp')
   .controller('MainCtrl', function($scope, search, $localStorage) {
-    $scope.schoolsFound = search.find()
+//     $scope.schoolsFound = search.find()
 
-    $scope.findSchools = function() {
-        $scope.schoolFound = search.find({
-          query: $scope.school
-        });
-        $scope.searchQuery = $scope.school;
-      }
+//     $scope.findSchools = function() {
+//         $scope.schoolFound = search.find({
+//           query: $scope.school
+//         });
+//         $scope.searchQuery = $scope.school;
+//       }
 //       Define data as results      
-    $scope.saveSchool = function(schoolResults) {
+$scope.schoolsFound = search.find()
+ $scope.findSchools = function() {
+        $scope.schoolFound = search.find();    
+ }
+
+  $scope.saveSchool = function(schoolResults) {
       var schoolData = {
         'name': schoolResults.schools.school.name,
         'id': schoolResults.schools.id
