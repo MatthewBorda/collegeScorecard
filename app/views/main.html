@@ -136,18 +136,17 @@ Integrate slider
    A {{search.filteredSchools.metadata.total}}
    B {{search.metadata.total.filteredSchools}}
   </p>
-<!--   <div>
-    <input 
-  type="text" 
-  placeholder="Type to filter" 
-  ng-model="schoolName" 
-  ng-change="search.updateSchool(schoolFilter);">
+  <div>
+   <form class="form-inline">
+      <input ng-model="query" type="text"
+        placeholder="Filter by" autofocus>
+    </form>
     
   </div>
-   -->
+  
   <div>
     <ul>
-  <li ng-repeat="schools in search.results">
+  <li ng-repeat="schools in search.results | school.name:query">
    {{schools.school.name}}
   </li>
 </ul>
