@@ -133,6 +133,8 @@ Integrate slider
   </p>
   <p>
    Search {{search.metadata.total}}
+   A {{search.filteredSchools.metadata.total}}
+   B {{search.metadata.total.filteredSchools}}
   </p>
   <div>
     <input 
@@ -146,7 +148,7 @@ Integrate slider
   <div>
     <ul>
   <li ng-repeat="schools in search.filteredSchools">
-   {{schools.school.name}}
+   {{schools.results.school.name}}
   </li>
 </ul>
   </div>
