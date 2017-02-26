@@ -205,7 +205,7 @@ Integrate slider
 
   <div class="results">
     <div ng-if="searchQuery">
- <div dir-paginate="schools in schoolFound.results | itemsPerPage:5 ">
+ <div dir-paginate="schools in schoolFound.results | itemsPerPage:3 ">
  
         <div class="container col-xs-12 col-sm-4 col-md-4 col-lg-4 col-lg-4 schoolResults">
 
@@ -264,11 +264,15 @@ Integrate slider
   </div>
  
       </div>
+      <div class = "container">
+        
         <dir-pagination-controls
        max-size="3"
        direction-links="true"
        boundary-links="true" >
     </dir-pagination-controls>
+        </div>
+      
             </div>
           </div>
    
