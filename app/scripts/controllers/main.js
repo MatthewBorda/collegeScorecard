@@ -30,7 +30,7 @@ angular.module('collegeScorecardApp')
 // $scope.schoolFound.results.school.id,
       };
       if (!$localStorage.savedSchools) {
-        $localStorage.savedSchools = [schoolFound];
+        $localStorage.savedSchools = [schoolData];
       } else {
 
         var save = true; // Initialize the save decision variable.
@@ -40,7 +40,7 @@ angular.module('collegeScorecardApp')
           }
         }
         if (save == true) {
-          $localStorage.savedSchools.push(schoolFound);
+          $localStorage.savedSchools.push(schoolData);
         } else {
           console.log('School already saved');
         }
