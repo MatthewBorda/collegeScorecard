@@ -24,10 +24,8 @@ angular.module('collegeScorecardApp')
 
   $scope.saveSchool = function(schoolResults) {
       var schoolData = {
-        'id': schoolResults.schools.id,
-        
-        
-
+        'id': schoolResults.school.id
+// $scope.schoolFound.results.school.id,
       };
       if (!$localStorage.savedSchools) {
         $localStorage.savedSchools = [schoolResults];
@@ -35,7 +33,7 @@ angular.module('collegeScorecardApp')
 
         var save = true; // Initialize the save decision variable.
         for (var i = 0; i < $localStorage.savedSchools.length; i++) {
-          if ($localStorage.savedSchools[i].id == schoolResults.schools.id) {
+          if ($localStorage.savedSchools[i].id == schoolData.id) {
             save = false;
           }
         }
