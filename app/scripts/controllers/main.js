@@ -24,8 +24,8 @@ angular.module('collegeScorecardApp')
 
   $scope.saveSchool = function(schoolFound) {
       var schoolData = {
-        'id':schoolFound.results.id,
-        'name':schoolFound.results.school.name
+        'id':schoolFound.results.id
+//         ,        'name':schoolFound.results.school.name
 // schoolResults.results.school.id
 // $scope.schoolFound.results.school.id,
       };
