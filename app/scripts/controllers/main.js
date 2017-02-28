@@ -23,7 +23,9 @@ angular.module('collegeScorecardApp')
     //   Local storage
 
   $scope.saveSchool = function(schools) {
-          var compareSchools = {};
+          var compareSchools = {
+            'id':schools
+          };
        
 //         ,        'name':schoolFound.results.school.name
 // schoolResults.results.school.id
