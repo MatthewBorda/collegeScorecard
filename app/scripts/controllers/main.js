@@ -48,7 +48,7 @@ angular.module('collegeScorecardApp')
     };
   
   
-//     $scope.gridOptions = {
+   $scope.gridOptions = {
 //       columnDefs: [
 //         //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
 //         //         { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.schoolFound.results.school.name}} </div>' },
@@ -56,8 +56,8 @@ angular.module('collegeScorecardApp')
 //         {name: 'id'}
 
 //       ],
-//       data: $localStorage
-//     };
+    data: $localStorage.compareSchools
+   };
     //Filters 
     $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
     $scope.degreeselected = function(item) {
