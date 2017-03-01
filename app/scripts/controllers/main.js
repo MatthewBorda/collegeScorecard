@@ -47,7 +47,7 @@ angular.module('collegeScorecardApp')
       }
     };
 //   Local storage
-    $scope.savedSchools = $localStorage;
+    $scope.savedSchools = $localStorage.compareSchools;
   
 //    $scope.gridOptions = {
 // //       columnDefs: [
