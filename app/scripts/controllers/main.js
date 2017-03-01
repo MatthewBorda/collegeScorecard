@@ -46,18 +46,19 @@ angular.module('collegeScorecardApp')
         }
       }
     };
+//   Local storage
+    $scope.savedSchools = $localStorage;
   
-  
-   $scope.gridOptions = {
-//       columnDefs: [
-//         //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
-//         //         { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.schoolFound.results.school.name}} </div>' },
-//         {name: 'name'}, 
-//         {name: 'id'}
+//    $scope.gridOptions = {
+// //       columnDefs: [
+// //         //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
+// //         //         { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.schoolFound.results.school.name}} </div>' },
+// //         {name: 'name'}, 
+// //         {name: 'id'}
 
-//       ],
-    data: $localStorage.compareSchools
-   };
+// //       ],
+//     data: $localStorage.compareSchools
+//    };
     //Filters 
     $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
     $scope.degreeselected = function(item) {
