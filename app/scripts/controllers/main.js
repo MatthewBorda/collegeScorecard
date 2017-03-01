@@ -43,7 +43,7 @@ angular.module('collegeScorecardApp')
           }
         }
         if (save === true) {
-            $localStorage.compareSchools=schools;
+            $localStorage.compareSchools.push(schools);
 //           $localStorage.compareSchools[schools.id]=schools;
         } else {
           console.log('School already saved');
