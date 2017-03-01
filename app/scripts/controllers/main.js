@@ -35,12 +35,12 @@ angular.module('collegeScorecardApp')
       } else {
 
         var save = true; // Initialize the save decision variable.
-        for (var i = 0; i < $localStorage.compareSchools.length; i++) {
-          if ($localStorage.compareSchools[i].id == schools.id) {
+        for (var $i = 0; $i < $localStorage.compareSchools.length; $i++) {
+          if ($localStorage.compareSchools[$i].id == schools.id) {
             save = false;
           }
         }
-        if (save == true) {
+        if (save === true) {
             $localStorage.compareSchools=schools;
 //           $localStorage.compareSchools[schools.id]=schools;
         } else {
