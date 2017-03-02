@@ -274,7 +274,7 @@ Integrate slider
 
 <div>
 <!-- LocalStorageTest  {{savedSchools}} Does work --> 
-   {{savedSchools.id}}
+   {{savedSchools.id[0]}}
 </div>
   <div ngrepeat="saved in savedSchools ">
     <p>
@@ -286,11 +286,11 @@ Integrate slider
     <p>
    ID {{saved.id}}
     </p>
-</div>
-<!--   <div class="saved grid">
+ </div>
+ <div class="saved grid">
     <div>
       <H1>Compare saved schools</H1>
-      <div id="grid1" ui-grid="gridOptions" class="grid"></div>
+      <div id="grid1" ui-grid="{ data: savedSchools }" class="grid"></div>
     </div>
   </div>
-</div>  -->
+</div>

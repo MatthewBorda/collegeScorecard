@@ -21,55 +21,26 @@ angular.module('collegeScorecardApp')
     }
 
     //   Local storage
-
-//     $scope.saveSchool = function(schools) {
-//       //           $localStorage.compareSchools = {
-//       //             'id': schools.id
-//       //           };
-
-//       //         ,        'name':schoolFound.results.school.name
-//       // schoolResults.results.school.id
-//       // $scope.schoolFound.results.school.id,
-
-//       if (!$localStorage.compareSchools) {
-//         //         $localStorage.compareSchools[schools.id]=schools;
-//         $localStorage.compareSchools = [schools];
-//       } else {
-
-//         var save = true; // Initialize the save decision variable.
-//         for (var $i = 0; $i < $localStorage.compareSchools.length; $i++) {
-//           if ($localStorage.compareSchools[$i].id == schools.id) {
-//             save = false;
-//           }
-//         }
-//         if (save === true) {
-//           $localStorage.compareSchools.push([schools]);
-//           //           $localStorage.compareSchools[schools.id]=schools;
-//         } else {
-//           console.log('School already saved');
-//         }
-//       }
-//     };
     $scope.saveSchool = function(schools) {
       var schoolData = {
         'name': schools.name,
         'id': schools.id
       };
-      if (!$localStorage.savedCities) {
-        $localStorage.savedCities = [schoolData];
+      if (!$localStorage.compareSchools) {
+        $localStorage.compareSchools = [schoolData];
       } else {
         // We have already saved some cities.
         // Check to make sure we haven't already saved the current city.
         var save = true; // Initialize the save decision variable.
         // Use this loop to check if we've already saved the city.
-        for (var i = 0; i < $localStorage.savedCities.length; i++) {
-          if ($localStorage.savedCities[i].id == schoolData.id) {
+        for (var i = 0; i < $localStorage.compareSchools.length; i++) {
+          if ($localStorage.compareSchools[i].id == schoolData.id) {
             // This is a duplicate, so don't save (variable set to false).
             save = false;
           }
         }
         if (save == true) {
-          $localStorage.savedCities.push(schoolData);
+          $localStorage.compareSchools.push(schoolData);
         } else {
           console.log('School already saved');
         }
@@ -78,16 +49,16 @@ angular.module('collegeScorecardApp')
     //   Local storage
     $scope.savedSchools = $localStorage.compareSchools;
 
-    //    $scope.gridOptions = {
-    // //       columnDefs: [
-    // //         //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
-    // //         //         { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.schoolFound.results.school.name}} </div>' },
-    // //         {name: 'name'}, 
-    // //         {name: 'id'}
+//        $scope.gridOptions = {
+    //       columnDefs: [
+    //         //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
+    //         //         { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.schoolFound.results.school.name}} </div>' },
+    //         {name: 'name'}, 
+    //         {name: 'id'}
 
-    // //       ],
-    //     data: $localStorage.compareSchools
-    //    };
+    //       ],
+//         data: $localStorage.compareSchools
+//        };
     //Filters 
     $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
     $scope.degreeselected = function(item) {
