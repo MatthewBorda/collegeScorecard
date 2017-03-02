@@ -31,24 +31,24 @@ angular.module('collegeScorecardApp')
 // schoolResults.results.school.id
 // $scope.schoolFound.results.school.id,
    
-      if (!$localStorage.compareSchools) {
-//         $localStorage.compareSchools[schools.id]=schools;
-                 $localStorage.compareSchools=schools;
-      } else {
+//       if (!$localStorage.compareSchools) {
+// //         $localStorage.compareSchools[schools.id]=schools;
+//                  $localStorage.compareSchools=schools;
+//       } else {
 
-        var save = true; // Initialize the save decision variable.
-        for (var $i = 0; $i < $localStorage.compareSchools.length; $i++) {
-          if ($localStorage.compareSchools[$i].id == schools.id) {
-            save = false;
-          }
-        }
-        if (save === true) {
-            $localStorage.compareSchools.push(schools);
-//           $localStorage.compareSchools[schools.id]=schools;
-        } else {
-          console.log('School already saved');
-        }
-      }
+//         var save = true; // Initialize the save decision variable.
+//         for (var $i = 0; $i < $localStorage.compareSchools.length; $i++) {
+//           if ($localStorage.compareSchools[$i].id == schools.id) {
+//             save = false;
+//           }
+//         }
+//         if (save === true) {
+//             $localStorage.compareSchools.push(schools);
+// //           $localStorage.compareSchools[schools.id]=schools;
+//         } else {
+//           console.log('School already saved');
+//         }
+//       }
     };
 //   Local storage
     $scope.savedSchools = $localStorage.compareSchools;
