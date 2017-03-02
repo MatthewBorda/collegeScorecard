@@ -29,13 +29,9 @@ angular.module('collegeScorecardApp')
       if (!$localStorage.compareSchools) {
         $localStorage.compareSchools = [schoolData];
       } else {
-        // We have already saved some cities.
-        // Check to make sure we haven't already saved the current city.
-        var save = true; // Initialize the save decision variable.
-        // Use this loop to check if we've already saved the city.
+        var save = true; 
         for (var i = 0; i < $localStorage.compareSchools.length; i++) {
           if ($localStorage.compareSchools[i].id == schoolData.id) {
-            // This is a duplicate, so don't save (variable set to false).
             save = false;
           }
         }
