@@ -272,26 +272,9 @@ Integrate slider
     </div>
   </div>
 
-<div>
-<!-- LocalStorageTest  {{savedSchools}} Does work --> 
-   {{savedSchools[0].id}}
-  {{savedSchools}}
-</div>
-  <div ngrepeat="saved in savedSchools ">
-    <p>
-     Local {{saved}}
-    </p>
-    <p>
-   ID as Results  {{saved["439057"]}}
-    </p>
-    <p>
-   ID {{saved.id}}
-    </p>
- </div>
  <div class="saved grid">
     <div>
       <H1>Compare saved schools</H1>
       <div id="grid1" ui-grid="{ data: savedSchools }" class="grid"></div>
     </div>
   </div>
-</div>
