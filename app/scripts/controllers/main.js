@@ -88,8 +88,8 @@ angular.module('collegeScorecardApp')
                         {field: 'State', width:100 },
                           //Ideal: minority school fields collapsed
                         //Earnings
-                        {field: 'Median Earnings at 10yrs', width:100, cellFilter: 'currency: 0' },
-                        {field: 'Above HS equiv at 10yrs', width:100 },
+                        {field: 'Median Earnings at 10yrs', width:100, cellFilter: 'currency:"$":0' },
+                        {field: 'Above HS equiv at 10yrs', width:100 , cellFilter: 'percentage:100'},
                         //Academics
                           //Ideal: Top 3 largest programs             
                         //Student
@@ -105,12 +105,12 @@ angular.module('collegeScorecardApp')
                         {field: 'ACT MID', width:100 },
                         //Repayment
                         //Aid
-                        {field: 'Median Debt', width:100 },
-                        {field: 'With Loan %', width:100 },
+                        {field: 'Median Debt', width:100, cellFilter: 'currency:"$":0'  },
+                        {field: 'With Loan %', width:100, cellFilter: 'currency:"$":0'  },
                         //Cost
-                        {field: 'Net Price', width:100 },
-                        {field: 'Cost Attendance', width:100 },
-                        {field: 'Tuition', width:100 },
+                        {field: 'Net Price', width:100, cellFilter: 'currency:"$":0'  },
+                        {field: 'Cost Attendance', width:100, cellFilter: 'currency:"$":0'  },
+                        {field: 'Tuition', width:100, cellFilter: 'currency:"$":0'  },
                         //Completion
                           //4 year
                           {field: 'Graduated in 4 yrs', width:100 },

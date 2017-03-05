@@ -242,7 +242,7 @@
             </div> -->
             <div class="schoolCost lineAbove">
               <p><b>{{schools["2014"].cost.attendance.academic_year | currency:"$":0}}
-                <span class="empty" ng-show="!schools['2014'].cost.attendance.academic_year">-</span></b> cost of attendance <span class="glyphicon glyphicon-info-sign"></span></p>
+                <span class="empty" ng-show="!schools['2014'].cost.attendance.academic_year">-</span></b> cost of attendance</p>
             </div>
             <div class="schoolPrice lineAbove">
               <p><b>{{schools["2014"].cost.avg_net_price.overall | currency:"$":0}}
@@ -250,15 +250,15 @@
             </div>
             <div class="schoolDebt lineAbove">
               <p> <b>{{schools["2014"].aid.median_debt.completers.overall | currency:"$":0}}
-                <span class="empty" ng-show="!schools['2014'].aid.median_debt.completers.overall">-</span></b> debt at graduation <span class="glyphicon glyphicon-info-sign"></span></p>
+                <span class="empty" ng-show="!schools['2014'].aid.median_debt.completers.overall">-</span></b> debt at graduation </p>
             </div>
             <div class="schoolCompletions lineAbove">
               <p><b> {{((schools["2014"].completion.completion_rate_4yr_150nt) *100).toFixed(0)}}%
-                <span class="empty" ng-show="!schools['2014'].completion.completion_rate_4yr_150nt">-</span></b> 150% completion rate <span class="glyphicon glyphicon-info-sign"></span></p>
+                <span class="empty" ng-show="!schools['2014'].completion.completion_rate_4yr_150nt">-</span></b> 150% completion rate </span></p>
             </div>
             <div class="schoolOutcomes lineAbove">
               <p><b>{{schools["2012"].earnings["10_yrs_after_entry"].median |  currency:"$":0}}
-                <span class="empty" ng-show="!schools['2012'].earnings['10_yrs_after_entry'].median">-</span></b> median income <span class="glyphicon glyphicon-info-sign"></span></p>
+                <span class="empty" ng-show="!schools['2012'].earnings['10_yrs_after_entry'].median">-</span></b> median income</p>
             </div>
             <div>
               <p><button class="btn btn-sm btn-primary" ng-click="saveSchool(schools)">Compare</button></p>
@@ -274,6 +274,9 @@
       </div>
     </div>
   </div>
+<div>
+  <H1>Definitions</H1>
+</div>
   <div class="saved grid">
     <div>
       <H1>Compare saved schools</H1>
