@@ -55,7 +55,10 @@ angular.module('collegeScorecardApp')
     //       ],
 //         data: $localStorage.compareSchools
 //        };
-    //Filters 
+  
+//   Data filters
+  
+    //Search filters 
     $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
     $scope.degreeselected = function(item) {
       $scope.selectedItem = item;
