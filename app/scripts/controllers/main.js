@@ -24,7 +24,7 @@ angular.module('collegeScorecardApp')
     $scope.saveSchool = function(schools) {
       var schoolData = {
          //Ideal: Year updated automatically
-        'ID': schools.id,
+        'id': schools.id,
         'Name': schools.school.name,
         //School
         'State': schools.school.state,
