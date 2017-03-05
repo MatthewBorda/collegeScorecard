@@ -83,7 +83,7 @@ angular.module('collegeScorecardApp')
                         enableColumnResizing: true,
                         columnDefs: [
                          {field: 'id', width:0 },
-                           { name: 'Remove', cellTemplate:'<button class="btn primary" ng-click="grid.appScope.showMe()">Remove</button>' },
+                           { name: 'Remove', cellTemplate:'<button class="btn primary" ng-click="grid.removeSchool()">Remove</button>', width:125 },
                         {field: 'Name', width:200 },
                         //School
                         {field: 'State', width:100 },
@@ -102,12 +102,12 @@ angular.module('collegeScorecardApp')
                         {field: 'Retenion %', width:100, cellFilter: 'number: 0' },
                         //Admissions
                         {field: 'Admit %', width:100, cellFilter: 'number: 0' },
-                        {field: 'SAT AVG', width:100, cellFilter: 'number: 0' },
-                        {field: 'ACT MID', width:100, cellFilter: 'number: 0' },
+                        {field: 'SAT AVG', width:100, displayName: 'Average SAT Score', cellFilter: 'number: 0' },
+                        {field: 'ACT MID', width:100,displayName: 'ACT midpoint', cellFilter: 'number: 0' },
                         //Repayment
                         //Aid
                         {field: 'Median Debt', width:100, cellFilter: 'currency:"$":0'  },
-                        {field: 'With Loan %', width:100, cellFilter: 'currency:"$":0'  },
+                        {field: 'With Loan %', width:100, cellFilter: 'number: 0'  },
                         //Cost
                         {field: 'Net Price', width:100, cellFilter: 'currency:"$":0'  },
                         {field: 'Cost Attendance', width:100, cellFilter: 'currency:"$":0'  },
@@ -119,7 +119,7 @@ angular.module('collegeScorecardApp')
                           {field: 'Graduated in 6 yrs', width:100, cellFilter: 'number: 0' }
                                    ]};
    $scope.removeSchool = function(){
-                   alert($localStorage.compareSchools.id);
+                   alert("Remove from storage");
                 };
 
     $scope.savedSchools = $localStorage.compareSchools;
