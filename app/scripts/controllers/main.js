@@ -83,7 +83,8 @@ angular.module('collegeScorecardApp')
                         enableColumnResizing: true,
                         columnDefs: [
                          {field: 'id', width:100 },
-                        {field: 'Name', width:'*' },
+                             { field: 'name',name: 'name',width:160,enableCellEdit:true,displayName:'Name',visible:true, enablePinning:true },
+//                         {field: 'Name', width:'*' },
                         //School
                         {field: 'State', width:"*" },
                           //Ideal: minority school fields collapsed
@@ -119,8 +120,8 @@ angular.module('collegeScorecardApp')
                                    ]};
   
     $scope.savedSchools = $localStorage.compareSchools;
-    $scope.gridOptions.columnDefs = [];
-   $scope.gridOptions.data = $localStorage.compareSchools;
+//     $scope.gridOptions.columnDefs = [];
+//    $scope.gridOptions.data = $localStorage.compareSchools;
 //        $scope.gridOptions = {
     //       columnDefs: [
     //         //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },
