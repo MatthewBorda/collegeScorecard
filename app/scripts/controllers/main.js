@@ -58,7 +58,7 @@ angular.module('collegeScorecardApp')
           //4 year
           'Graduated in 4 yrs': schools['2007'].completion.completion_rate_4yr_100nt,
           //6 year
-          'Graduated in 6 yrs': schools['2007'].completion.completion_rate_4yr_150nt,
+          'Graduated in 6 yrs': schools['2007'].completion.completion_rate_4yr_150nt
         
       };
       if (!$localStorage.compareSchools) {
@@ -78,6 +78,47 @@ angular.module('collegeScorecardApp')
       }
     };
     //   Local storage
+  
+          {field: 'Graduated in 6 yrs', width:"" }
+        
+  $scope.gridOptions = { data:  $localStorage.compareSchools, 
+                       columnDefs: [
+                         {field: 'id', width:"" },
+                        {field: 'Name', width:"" },
+                        //School
+                        {field: 'State', width:"" },
+                          //Ideal: minority school fields collapsed
+                        //Earnings
+                        {field: 'Median Earnings at 10yrs', width:"" },
+                        {field: 'Above HS equiv at 10yrs', width:"" },
+                        //Academics
+                          //Ideal: Top 3 largest programs             
+                        //Student
+                        {field: 'Undergraduates', width:"" },
+                        {field: 'Female %', width:"" },
+                        {field: 'White %', width:"" },
+                        {field: 'Pell %', width:"" },
+                        {field: 'First Gen %', width:"" },
+                        {field: 'Retenion %', width:"" },
+                        //Admissions
+                        {field: 'Admit %', width:"" },
+                        {field: 'SAT AVG', width:"" },
+                        {field: 'ACT MID', width:"" },
+                        //Repayment
+                        //Aid
+                        {field: 'Median Debt', width:"" },
+                        {field: 'With Loan %', width:"" },
+                        //Cost
+                        {field: 'Net Price', width:"" },
+                        {field: 'Cost Attendance', width:"" },
+                        {field: 'Tuition', width:"" },
+                        //Completion
+                          //4 year
+                          {field: 'Graduated in 4 yrs', width:"" },
+                          //6 year
+                          {field: 'Graduated in 6 yrs', width:"" }
+                                   ]}
+  
     $scope.savedSchools = $localStorage.compareSchools;
     $scope.gridOptions.columnDefs = [];
    $scope.gridOptions.data = $localStorage.compareSchools;
