@@ -82,9 +82,8 @@ angular.module('collegeScorecardApp')
   $scope.gridOptions = { data:  $localStorage.compareSchools, 
                         enableColumnResizing: true,
                         columnDefs: [
-                         {field: 'id', width:100 },
-                             { field: 'name',name: 'name',width:160,enableCellEdit:true,displayName:'Name',visible:true, enablePinning:true },
-//                         {field: 'Name', width:'*' },
+                         {field: 'id', width:0 },
+                        {field: 'Name', width:'*' },
                         //School
                         {field: 'State', width:"*" },
                           //Ideal: minority school fields collapsed
