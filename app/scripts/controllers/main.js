@@ -36,7 +36,7 @@ angular.module('collegeScorecardApp')
           //Ideal: Top 3 largest programs             
         //Student
         'Undergraduates': schools['2014'].student.size,
-        'Female %': schools['2014'].student.demographics.women, 
+        'Female %': schools['2014'].student.demographics.women *100, 
         'White %': schools['2014'].student.demographics.race_ethnicity.white,
         'Pell %': schools['2014'].student.students_with_pell_grant,
         'First Gen %': schools['2014'].student.share_firstgeneration,
@@ -86,6 +86,7 @@ angular.module('collegeScorecardApp')
                         {field: 'Name', width:200 },
                         //School
                         {field: 'State', width:100 },
+                        {field: 'Undergraduates', width:100, cellFilter: 'number: 0'  },
                           //Ideal: minority school fields collapsed
                         //Earnings
                         {field: 'Median Earnings at 10yrs', width:100, cellFilter: 'currency:"$":0' },
@@ -93,8 +94,7 @@ angular.module('collegeScorecardApp')
                         //Academics
                           //Ideal: Top 3 largest programs             
                         //Student
-                        {field: 'Undergraduates', width:100 },
-                        {field: 'Female %', width:100 },
+                        {field: 'Female %', width:100, cellFilter: 'number: 0'  },
                         {field: 'White %', width:100 },
                         {field: 'Pell %', width:100 },
                         {field: 'First Gen %', width:100 },
