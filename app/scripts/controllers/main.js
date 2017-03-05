@@ -89,7 +89,7 @@ angular.module('collegeScorecardApp')
                           //Ideal: minority school fields collapsed
                         //Earnings
                         {field: 'Median Earnings at 10yrs', width:100, cellFilter: 'currency:"$":0' },
-                        {field: 'Above HS equiv at 10yrs', width:100 , cellFilter: 'percentage:100'},
+                        {field: 'Above HS equiv at 10yrs', width:100 },
                         //Academics
                           //Ideal: Top 3 largest programs             
                         //Student
