@@ -11,7 +11,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 .lineAbove {
- border-top:2px solid #7F7F7F
+ border-top:2px solid #7F7F7F;
 }
 body {
   padding: 0;
@@ -19,21 +19,24 @@ body {
 font-family: Montserrat, "Helvetica Neue", Helvetica, arial, sans-serif;
 }
 
-
 .searchFields {
-  border:  2px solid #7F7F7F;
-  
+    border:  2px solid #7F7F7F;
+  padding:0;
+    -webkit-box-shadow: 10px 10px 50px 5px rgba(0,0,0,0.1);
+  -moz-box-shadow: 10px 10px 50px 5px rgba(0,0,0,0.1);
+  box-shadow: 10px 10px 50px 5px rgba(0,0,0,0.1);
 }
 .schoolResults {
   border:  2px solid #7F7F7F;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
   text-align: center;
   background-color: #FFFFFF;
   width:90%
   
 }
+.searchGroup {
+    border-top: 1px solid #7F7F7F;
+}
+
 .schoolHeader {
  background-color: #7F7F7F
 }
