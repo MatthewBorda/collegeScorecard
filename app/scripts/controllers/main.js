@@ -82,40 +82,40 @@ angular.module('collegeScorecardApp')
   $scope.gridOptions = { data:  $localStorage.compareSchools, 
                         enableColumnResizing: true,
                         columnDefs: [
-                         {field: 'id', width:0 },
-                        {field: 'Name', width:'*' },
+                         {field: 'id', width:100 },
+                        {field: 'Name', width:100 },
                         //School
-                        {field: 'State', width:"*" },
+                        {field: 'State', width:100 },
                           //Ideal: minority school fields collapsed
                         //Earnings
-                        {field: 'Median Earnings at 10yrs', width:"*" },
-                        {field: 'Above HS equiv at 10yrs', width:"*" },
+                        {field: 'Median Earnings at 10yrs', width:100 },
+                        {field: 'Above HS equiv at 10yrs', width:100 },
                         //Academics
                           //Ideal: Top 3 largest programs             
                         //Student
-                        {field: 'Undergraduates', width:"*" },
-                        {field: 'Female %', width:"*" },
-                        {field: 'White %', width:"*" },
-                        {field: 'Pell %', width:"*" },
-                        {field: 'First Gen %', width:"*" },
-                        {field: 'Retenion %', width:"*" },
+                        {field: 'Undergraduates', width:100 },
+                        {field: 'Female %', width:100 },
+                        {field: 'White %', width:100 },
+                        {field: 'Pell %', width:100 },
+                        {field: 'First Gen %', width:100 },
+                        {field: 'Retenion %', width:100 },
                         //Admissions
-                        {field: 'Admit %', width:"*" },
-                        {field: 'SAT AVG', width:"*" },
-                        {field: 'ACT MID', width:"*" },
+                        {field: 'Admit %', width:100 },
+                        {field: 'SAT AVG', width:100 },
+                        {field: 'ACT MID', width:100 },
                         //Repayment
                         //Aid
-                        {field: 'Median Debt', width:"*" },
-                        {field: 'With Loan %', width:"*" },
+                        {field: 'Median Debt', width:100 },
+                        {field: 'With Loan %', width:100 },
                         //Cost
-                        {field: 'Net Price', width:"*" },
-                        {field: 'Cost Attendance', width:"*" },
-                        {field: 'Tuition', width:"*" },
+                        {field: 'Net Price', width:100 },
+                        {field: 'Cost Attendance', width:100 },
+                        {field: 'Tuition', width:100 },
                         //Completion
                           //4 year
-                          {field: 'Graduated in 4 yrs', width:"*" },
-                          //6 year
-                          {field: 'Graduated in 6 yrs', width:"*" }
+                          {field: 'Graduated in 4 yrs', width:100 },
+                          //6 year100
+                          {field: 'Graduated in 6 yrs', width:100 }
                                    ]};
   
     $scope.savedSchools = $localStorage.compareSchools;
