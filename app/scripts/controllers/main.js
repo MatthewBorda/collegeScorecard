@@ -79,7 +79,8 @@ angular.module('collegeScorecardApp')
     };
     //   Local storage
     $scope.savedSchools = $localStorage.compareSchools;
-
+    $scope.gridOptions.columnDefs = [];
+   $scope.gridOptions.data = $localStorage.compareSchools;
 //        $scope.gridOptions = {
     //       columnDefs: [
     //         //       { name: 'School', cellTemplate: '<div class="ui-grid-cell-contents">{{ COL_FIELD.results.schools.name}} </div>' },

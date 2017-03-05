@@ -445,6 +445,7 @@ ext: '.css'
                   src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
                   dest: '<%= yeoman.dist %>'
                 },
+                        
                         {
               expand: true,
               flatten: true,
