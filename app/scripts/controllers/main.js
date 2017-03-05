@@ -23,8 +23,43 @@ angular.module('collegeScorecardApp')
     //   Local storage
     $scope.saveSchool = function(schools) {
       var schoolData = {
-        'name': schools.school.name,
-        'id': schools.id
+         //Ideal: Year updated automatically
+        'ID': schools.id,
+        'Name': schools.school.name,
+        //School
+        'State': schools.school.state,
+          //Ideal: minority school fields collapsed
+        //Earnings
+        'Median Earnings at 10yrs': schools['2012'].earnings['10_yrs_after_entry'].median,
+        'Above HS equiv at 10yrs': schools['2012'].earnings['10_yrs_after_entry'].percent_greater_than_25000,
+        //Academics
+          //Ideal: Top 3 largest programs             
+        //Student
+        'Undergraduates': schools['2014'].student.size,
+        'Female %': schools['2014'].student.demographics.women, 
+        'White %': schools['2014'].student.demographics.race_ethnicity.white,
+        'Pell %': schools['2014'].student.students_with_pell_grant,
+        'First Gen %': schools['2014'].student.share_firstgeneration,
+        'Retenion %': schools['2014'].student.retention_rate.overall.full_time,
+        //Admissions
+        'Admit %': schools['2014'].admissions.admission_rate.overall,
+        'SAT AVG': schools['2014'].admissions.sat_scores.overall,
+        'ACT MID': schools['2014'].admissions.act_scores.midpoint.cumulative,
+        //Repayment
+        
+        //Aid
+        'Median Debt': schools['2014'].aid.median_debt.completers.overall,
+        'With Loan %': schools['2014'].aid.students_with_any_loan,
+        //Cost
+        'Net Price': schools['2014'].cost.avg_net_price.overall,
+        'Cost Attendance': schools['2014'].cost.attendance.academic_year,
+        'Tuition': schools['2014'].cost.tuition.in_state,
+        //Completion
+          //4 year
+          'Graduated in 4 yrs': schools['2007'].completion.completion_rate_4yr_100nt,
+          //6 year
+          'Graduated in 6 yrs': schools['2007'].completion.completion_rate_4yr_150nt,
+        
       };
       if (!$localStorage.compareSchools) {
         $localStorage.compareSchools = [schoolData];
@@ -273,20 +308,18 @@ angular.module('collegeScorecardApp')
       }
     };
 
-
-  })
-.directive('bsTooltip', function(){
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs){
-            $(element).hover(function(){
-                // on mouseenter
-                $(element).tooltip('show');
-            }, function(){
-                // on mouseleave
-                $(element).tooltip('hide');
-            });
-        }
-    };
-});
-
+// .directive('bsTooltip', function(){
+//     return {
+//         restrict: 'A',
+//         link: function(scope, element, attrs){
+//             $(element).hover(function(){
+//                 // on mouseenter
+//                 $(element).tooltip('show');
+//             }, function(){
+//                 // on mouseleave
+//                 $(element).tooltip('hide');
+//             });
+//         }
+//     };
+// });
+  });

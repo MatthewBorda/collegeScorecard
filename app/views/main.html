@@ -219,18 +219,12 @@
 
           <div class="row schoolHeader">
             <div class="row-fluid schoolHeight">
-              <h4><b>{{schools.school.name}}</b></h4>
+              <h4><b> <a ng-href="https://{{schools.school.school_url}}">{{schools.school.name}} </a></b></h4>
             </div>
             <p>{{schools.school.city}}, {{schools.school.state}}</p>
               <p><b>{{schools["2014"].student.size | number}}
-                  <span class="empty" ng-show="!schools['2014'].admissions.sat_scores.average.overall">-</span></b> average SAT score</p>
-            
+                  <span class="empty" ng-show="!{{schools['2014'].student.size">-</span></b> undergraduate students</p>
           </div>
-          <div class="schoolLink">
-            <a href="{{schools.school.school_url}} ">Link</a>
-            <a ng-href="https://external.link/{{schools.school.school_url}}">Link </a>
-          </div>
-
           <div class="schoolDetails">
             <div class="schoolAcceptance lineAbove">
               <p> <b>{{((schools["2014"].admissions.admission_rate.overall) *100).toFixed(0)}}%
@@ -247,23 +241,23 @@
                 <span class="empty" ng-show="!schools['2014'].admissions.act_scores.average.overall">-</span></b> average ACT score</p>
             </div> -->
             <div class="schoolCost lineAbove">
-              <p><b>{{schools["2014"].cost.attendance.academic_year | currency:0 }}
+              <p><b>{{schools["2014"].cost.attendance.academic_year | currency:"$":0}}
                 <span class="empty" ng-show="!schools['2014'].cost.attendance.academic_year">-</span></b> cost of attendance <span class="glyphicon glyphicon-info-sign"></span></p>
             </div>
             <div class="schoolPrice lineAbove">
-              <p><b>{{schools["2014"].cost.avg_net_price.overall | currency:0}}
+              <p><b>{{schools["2014"].cost.avg_net_price.overall | currency:"$":0}}
                 <span class="empty" ng-show="!schools['2014'].cost.avg_net_price.overall">-</span></b> average net price</p>
             </div>
             <div class="schoolDebt lineAbove">
-              <p> <b>{{schools["2014"].aid.median_debt.completers.overall | currency:0}}
+              <p> <b>{{schools["2014"].aid.median_debt.completers.overall | currency:"$":0}}
                 <span class="empty" ng-show="!schools['2014'].aid.median_debt.completers.overall">-</span></b> debt at graduation <span class="glyphicon glyphicon-info-sign"></span></p>
             </div>
             <div class="schoolCompletions lineAbove">
-              <p><b> {{((schools["2014"].completion.completion_rate_4yr_150nt) *100).toFixed(0)}}
+              <p><b> {{((schools["2014"].completion.completion_rate_4yr_150nt) *100).toFixed(0)}}%
                 <span class="empty" ng-show="!schools['2014'].completion.completion_rate_4yr_150nt">-</span></b> 150% completion rate <span class="glyphicon glyphicon-info-sign"></span></p>
             </div>
             <div class="schoolOutcomes lineAbove">
-              <p><b>{{schools["2012"].earnings["10_yrs_after_entry"].median | currency:0}}
+              <p><b>{{schools["2012"].earnings["10_yrs_after_entry"].median |  currency:"$":0}}
                 <span class="empty" ng-show="!schools['2012'].earnings['10_yrs_after_entry'].median">-</span></b> median income <span class="glyphicon glyphicon-info-sign"></span></p>
             </div>
             <div>
@@ -272,8 +266,8 @@
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
+      <div class="container clearfix">
+        <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 col-lg-12">
           <dir-pagination-controls max-size="3" direction-links="true" boundary-links="true">
           </dir-pagination-controls>
         </div>
