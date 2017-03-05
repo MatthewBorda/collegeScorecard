@@ -444,7 +444,17 @@ ext: '.css'
                   cwd: '.',
                   src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
                   dest: '<%= yeoman.dist %>'
-                }]
+                },
+                        {
+              expand: true,
+              flatten: true,
+              dest: 'dist/styles/',
+              src: ['bower_components/angular-ui-grid/ui-grid.ttf',
+                    'bower_components/angular-ui-grid/ui-grid.woff',
+                    'bower_components/angular-ui-grid/ui-grid.eot',
+                    'bower_components/angular-ui-grid/ui-grid.svg'
+                    ]
+            }]
               },
               styles: {
                 expand: true,
