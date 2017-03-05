@@ -79,8 +79,6 @@ angular.module('collegeScorecardApp')
     };
     //   Local storage
   
-          {field: 'Graduated in 6 yrs', width:"" }
-        
   $scope.gridOptions = { data:  $localStorage.compareSchools, 
                        columnDefs: [
                          {field: 'id', width:"" },
@@ -117,7 +115,7 @@ angular.module('collegeScorecardApp')
                           {field: 'Graduated in 4 yrs', width:"" },
                           //6 year
                           {field: 'Graduated in 6 yrs', width:"" }
-                                   ]}
+                                   ]};
   
     $scope.savedSchools = $localStorage.compareSchools;
     $scope.gridOptions.columnDefs = [];
