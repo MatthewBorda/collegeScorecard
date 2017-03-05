@@ -1,6 +1,17 @@
 <div class="searchFields">
+   <div class="container introHead" >
+     <div class="row">
+       <h1>
+         Find schools
+       </h1>
+       <h2>
+         Save and Compare Schools Now
+       </h2>
+     </div>
+  </div>
   <!-- School Name     -->
-  <div class="mainSearch container">
+    <div class = "searchGroup">
+    <div class="mainSearch container">
     <div class="row">
       <div class="col-xs-11 col-sm-11 col-md-11 lg-col-lg-11">
         <h2>Name</h2>
@@ -11,7 +22,7 @@
       </div>
     </div>
   </div>
-  <div class="container" ng-show="showName">
+    <div class="container" ng-show="showName">
     <div class="col-xs-12 col-sm-12 col-md-12 lg-col-lg-12">
       <p class="lead">
         <div ng-init="school='Seattle University'">
@@ -20,6 +31,7 @@
       </div>
     </div>
     <!--Degree Program      -->
+    <div class = "searchGroup">
     <div class="degreeProgram container">
       <div class="row">
         <div class="col-xs-11 col-sm-11 col-md-11 lg-col-lg-11">
@@ -54,7 +66,9 @@
         </div>
       </div>
     </div>
-    <!-- Location     -->
+      </div>
+      <!-- Location     -->
+    <div class = "searchGroup">
     <div class="location container">
       <div class="row">
         <div class="col-xs-11 col-sm-11 col-md-11 lg-col-lg-11">
@@ -98,7 +112,9 @@
 
       </div>
     </div>
-    <!-- likeMe     -->
+    </div>
+      <!-- likeMe     -->
+    <div class = "searchGroup">
     <div class="likeMe container">
       <div class="row">
         <div class="col-xs-11 col-sm-11 col-md-11 lg-col-lg-11">
@@ -132,7 +148,9 @@
         <rzslider rz-slider-model="pellSlider.minValue" rz-slider-high="pellSlider.maxValue" rz-slider-options="pellSlider.options"></rzslider>
       </div>
     </div>
-    <!-- Cost -->
+  </div> 
+      <!-- Cost -->
+    <div class = "searchGroup">
     <div class="cost container">
       <div class="row">
         <div class="col-xs-11 col-sm-11 col-md-11 lg-col-lg-11">
@@ -160,7 +178,8 @@
         <rzslider rz-slider-model="loanSlider.minValue" rz-slider-high="loanSlider.maxValue" rz-slider-options="loanSlider.options"></rzslider>
       </div>
     </div>
-    <!-- Outcomes   -->
+   </div> <!-- Outcomes   -->
+    <div class = "searchGroup">
     <div class="outcomes container">
       <div class="row">
         <div class="col-xs-11 col-sm-11 col-md-11 lg-col-lg-11">
@@ -185,8 +204,12 @@
         <rzslider rz-slider-model="earning1Slider.minValue" rz-slider-high="earning1Slider.maxValue" rz-slider-options="earning1Slider.options"></rzslider>
       </div>
     </div>
-    <!--Search button  -->
-    <p><button class="btn btn-lg btn-primary" ng-click="findSchools()">Find Schools</button></p>
+    </div>
+      <!--Search button  -->
+      <div class="searchButton text-center">
+    <p><button class="btn btn-lg  btn-primary" ng-click="findSchools()">Find Schools</button></p>    
+      </div>
+    
   </div>
   <div class="results">
     <div ng-if="searchQuery">

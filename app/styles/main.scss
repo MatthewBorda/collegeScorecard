@@ -18,10 +18,13 @@ body {
   background-color: #DBDBDB;
 font-family: Montserrat, "Helvetica Neue", Helvetica, arial, sans-serif;
 }
-
+.introHead {
+   text-align: center;
+}
 .searchFields {
     border:  2px solid #7F7F7F;
   padding:0;
+   background-color: #FFFFFF;
     -webkit-box-shadow: 10px 10px 50px 5px rgba(0,0,0,0.1);
   -moz-box-shadow: 10px 10px 50px 5px rgba(0,0,0,0.1);
   box-shadow: 10px 10px 50px 5px rgba(0,0,0,0.1);
