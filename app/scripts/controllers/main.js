@@ -82,13 +82,13 @@ angular.module('collegeScorecardApp')
   $scope.gridOptions = { data:  $localStorage.compareSchools, 
                         enableColumnResizing: true,
                         columnDefs: [
-                         {field: 'id', width:100 },
-                        {field: 'Name', width:100 },
+                         {field: 'id', width:0 },
+                        {field: 'Name', width:200 },
                         //School
                         {field: 'State', width:100 },
                           //Ideal: minority school fields collapsed
                         //Earnings
-                        {field: 'Median Earnings at 10yrs', width:100 },
+                        {field: 'Median Earnings at 10yrs', width:100, cellFilter: 'currency: 0' },
                         {field: 'Above HS equiv at 10yrs', width:100 },
                         //Academics
                           //Ideal: Top 3 largest programs             

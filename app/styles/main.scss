@@ -75,7 +75,11 @@ font-family: Montserrat, "Helvetica Neue", Helvetica, arial, sans-serif;
     padding-bottom: 19px;
   }
 }
-
+/*Grid formatting  */
+.ui-grid-header-cell-label {
+    display:inline-block;
+    white-space:initial;
+}
 /* Custom page footer */
 .footer {
   padding-top: 19px;
