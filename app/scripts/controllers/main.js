@@ -83,7 +83,7 @@ angular.module('collegeScorecardApp')
                         enableColumnResizing: true,
                         columnDefs: [
                          {field: 'id', width:0 },
-                           { name: 'Remove', cellTemplate:'<button class="btn primary" ng-click="grid.removeSchool()">Remove</button>', width:125 },
+                           { name: 'Remove', cellTemplate:'<button class="btn primary" ng-click="grid.appScope.removeSchool()">Remove</button>', width:75 },
                         {field: 'Name', width:200 },
                         //School
                         {field: 'State', width:100 },
