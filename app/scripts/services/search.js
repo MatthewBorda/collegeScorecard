@@ -22,7 +22,7 @@ angular.module('collegeScorecardApp')
         find: {
           method: 'GET',
           params: {
-            query: 'Seattle',
+//             query: 'Seattle',
             minClass: 0,
             maxClass: 60000
           },
