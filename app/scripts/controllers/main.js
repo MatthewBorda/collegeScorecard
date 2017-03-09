@@ -15,7 +15,9 @@ angular.module('collegeScorecardApp')
 
     $scope.findSchools = function() {
       $scope.schoolFound = search.find({
-        query: $scope.school
+//         query: $scope.school,
+        minSize: $scope.classSlider.maxValue,
+        maxSize: $scope.classSlider.minValue 
       });
       $scope.searchQuery = $scope.school;
     }
@@ -323,13 +325,14 @@ angular.module('collegeScorecardApp')
       }
     };
     $scope.tuitionSlider = {
-      minValue: 0,
-      maxValue: 100,
+    minValue: 0,
+      maxValue: 100000,
       options: {
+
         floor: 0,
-        ceil: 100,
-        step: 1,
-        minRange: 10,
+        ceil: 100000,
+        step: 1000,
+        minRange: 1000,
         maxRange: 100,
         pushRange: true
       }

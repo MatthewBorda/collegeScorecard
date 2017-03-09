@@ -48,6 +48,11 @@
       <div class="col-xs-12 col-sm-12 col-md-12 lg-col-lg-12">
         <!-- Search fields          -->
         <p>Undergraduate Size</p>
+            Min Value:
+            <input type="number" ng-model="classSlider.minValue" />
+            <br/>Max Value:
+            <input type="number" ng-model="classSlider.maxValue" />
+            <br/>
         <div>
           <rzslider rz-slider-model="classSlider.minValue" rz-slider-high="classSlider.maxValue" rz-slider-options="classSlider.options"></rzslider>
         </div>
