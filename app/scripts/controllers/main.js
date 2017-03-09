@@ -20,6 +20,10 @@ angular.module('collegeScorecardApp')
         maxClass: $scope.classSlider.minValue 
       });
       $scope.searchQuery = $scope.school;
+      $scope.searchminClass = $scope.classSlider.maxValue;
+      $scope.searchminClass = $scope.classSlider.minValue;
+      
+      
     }
 
     //   Local storage
