@@ -9,8 +9,24 @@
        </h2>
     </div>
   </div>
-  <!-- School Name     -->
-  <div class="searchGroup">
+    <div class="about">
+      <div class="row">
+        <h2>About</h2><button type="submit" class="btn btn-link" ng-click="showAbout = !showAbout">
+          <span class="glyphicon glyphicon-chevron-down"></span></button>
+       </div>
+       <div class="container" ng-show="showAbout">
+        <div class="col-xs-12 col-sm-12 col-md-12 lg-col-lg-12">
+          <p>
+            The College Scorecard project is intended to provide students and 
+            parents a full understanding of the cost and benefits of higher 
+            education. This project expands on that intention by providing
+            users the ability to discover and compare schools based on a
+            a school's student profile, costs, and outcomes. 
+          </p>
+          <p>Use the filters below to discover schools that match your prefences. Then you can save and compare schools.</p>
+        </div>
+      </div>  
+  </div>
     <!-- likeMe     -->
     <div class="searchGroup">
       <div class="likeMe container">
@@ -110,8 +126,6 @@
     <div class="searchButton text-center">
       <p><button class="btn btn-lg  btn-primary" ng-click="findSchools()">Find Schools</button></p>
     </div>
-
-  </div>
 </div>
 <div class="results">
   <!--     <div ng-if="searchQuery"> -->
@@ -169,8 +183,113 @@
     </div>
   </div>
 </div>
-<div>
+<div class="definitions">
   <H1>Definitions</H1>
+  <table class ="definitionTable">
+<p>
+  All data are from the 2014/15 academic year unless otherwise noted. This is the most recent year of data available. 
+    </p>
+    <tr>
+    <th>Field</th>
+    <th>Definition</th> 
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td>Undergraduate Size</td>
+    <td>The total number of undergraduate students enrolled in the current academic year.</td> 
+    <td>Small schools are less than 2,000 students, medium schools range from 2,000 to 15,000 students, and large schools range from 15,001 to 60,000 students.</td>
+  </tr>
+  <tr>
+    <td>Acceptance Rate</td>
+    <td>The percent of applications accepted by the school.</td> 
+    <td>The acceptance rate indicates the liklihood of a student being accepted to a school</td>
+  </tr>
+  <tr>
+    <td>SAT average</td>
+    <td>The average combined SAT school for enrolled students</td> 
+    <td></td>
+  </tr>
+  <tr>
+    <td>ACT midpoint</td>
+    <td>The ACT median value.</td> 
+    <td></td>
+  </tr>
+  <tr>
+    <td>% White</td>
+    <td>The percent of undergraduates who identify as white</td> 
+    <td>The percent of white students campus reflects the diversity of the campus.</td>
+  </tr>
+  <tr>
+    <td>% First Generation</td>
+    <td>The percent of first generation in college undergraduates.</td> 
+    <td></td>
+  </tr>
+  <tr>
+    <td>% Pell Grant Recipients</td>
+    <td>The percent of undergraduates who recieve Pell Grants</td> 
+    <td>This field is a proxy to reflect the amount of economic diversity on campus.</td>
+  </tr><tr>
+    <td>% Female</td>
+    <td>The percent of female undergraduates. </td> 
+    <td></td>
+  </tr>  
+    <tr>
+    <td>% Retained After First Term</td>
+    <td>The percent of first-time, full-time (freshmen) degree-seeking freshmen who start in a fall term and are enrolled in the subsequent term</td> 
+    <td>The retention rates reflects the likelihood that a student will persist at the university</td>
+  </tr>
+    <tr>
+    <td>Average Net Price of Attendance</td>
+    <td>The average net price students pay for attendance</td> 
+    <td>The net price is average cost of attendance after all scholarship and grant monies are applied</td>
+  </tr>
+    <tr>
+    <td>Tuition (in State)</td>
+    <td>The in-state tuition cost</td> 
+    <td>The cost of class enrollment only</td>
+  </tr>
+    <tr>
+    <td>Cost of Attendance</td>
+    <td>Cost of attendance includes tution, fees, room and board.</td> 
+    <td>This is the full "sticker price" to attend.</td>
+  </tr>
+  <tr>
+    <td>% with Loans</td>
+    <td>The percent of undergraduates who borrowed any federal loans</td> 
+    <td></td>
+  </tr>
+  <tr>
+    <td>Debt at Graduation</td>
+    <td>The average principle amount of debt owed by undergraduates after completing a degree program</td> 
+    <td>The figure does not include debt accrued by students who transfer or do not complete their degree program</td>
+  </tr>
+  <tr>
+    <td>150% Normal Time Complete Rates</td>
+    <td>The percent of first-time, full-time, degree-seeking freshmen who graduate within 150% of normal time</td> 
+    <td>Normal time for a 4 year degree institution is 6 years. Data from the 2007 entering freshmen cohort </td>
+  </tr>
+  <tr>
+    <td>Post-Graduation Earning 10 Years from Graduation</td>
+    <td>The median income for students 10 years after graduation. Most recent from the 2002 graduating class</td> 
+    <td></td>
+  </tr>
+  <tr>
+    <td>% of Graduates Earning More than High School Graduates</td>
+    <td>The percent of students earning more that the average income of high school graduates ($25,000) ten years after graduation</td> 
+    <td></td>
+  </tr>
+  <tr>
+    <td>Graduated in 4 Years</td>
+    <td>The percent of first-time, full-time, degree-seeking freshmen who graduate within 100% of normal time</td> 
+    <td>Normal time for a 4 year degree institution is 4 years. Data from the 2007 entering freshmen cohort </td>
+  </tr>
+  <tr>
+    <td>Graduated in 6 Years</td>
+    <td>See 150% Normal Time Complete Rates</td> 
+    <td></td>
+  </tr>
+    
+</table>
 </div>
 <div class="saved grid">
   <div>
