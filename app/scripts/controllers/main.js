@@ -394,7 +394,7 @@ angular.module('collegeScorecardApp')
         ceil: 100000,
         step: 1000,
         minRange: 1000,
-        maxRange: 100,
+        maxRange: 100000,
         pushRange: true
       }
     };
@@ -407,7 +407,7 @@ angular.module('collegeScorecardApp')
         ceil: 100000,
         step: 1000,
         minRange: 1000,
-        maxRange: 100,
+        maxRange: 100000,
         pushRange: true
       }
     };
@@ -420,7 +420,7 @@ angular.module('collegeScorecardApp')
         ceil: 100000,
         step: 1000,
         minRange: 1000,
-        maxRange: 100,
+        maxRange: 100000,
         pushRange: true
       }
     };
@@ -440,17 +440,17 @@ angular.module('collegeScorecardApp')
 
     $scope.debtSlider = {
       minValue: 0,
-      maxValue: 1,
+      maxValue: 100000,
       options: {
+
         floor: 0,
-        ceil: 1,
-        step: 0.1,
-        minRange: 0.1,
-        maxRange: 1,
+        ceil: 100000,
+        step: 1000,
+        minRange: 1000,
+        maxRange: 100000,
         pushRange: true
       }
     };
-
     $scope.loanSlider = {
       minValue: 0,
       maxValue: 1,
@@ -473,7 +473,7 @@ angular.module('collegeScorecardApp')
         ceil: 100000,
         step: 1000,
         minRange: 1000,
-        maxRange: 100,
+        maxRange: 100000,
         pushRange: true
       }
     };
@@ -486,7 +486,7 @@ angular.module('collegeScorecardApp')
         ceil: 100000,
         step: 1000,
         minRange: 1000,
-        maxRange: 100,
+        maxRange: 100000,
         pushRange: true
       }
     };
@@ -498,7 +498,7 @@ angular.module('collegeScorecardApp')
         ceil: 100000,
         step: 1000,
         minRange: 1000,
-        maxRange: 100,
+        maxRange: 100000,
         pushRange: true
       }
     };
