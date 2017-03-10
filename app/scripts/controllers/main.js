@@ -275,7 +275,20 @@ angular.module('collegeScorecardApp')
         pushRange: true
       }
     };
-    $scope.hsSlider = {
+  
+  $scope.completionSlider = {
+      minValue: 0,
+      maxValue: 1,
+      options: {
+        floor: 0,
+        ceil: 1,
+        step: 0.1,
+        minRange: 0.1,
+        maxRange: 1,
+        pushRange: true
+      }
+    };
+  $scope.hsSlider = {
       minValue: 0,
       maxValue: 1,
       options: {
