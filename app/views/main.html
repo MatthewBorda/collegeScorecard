@@ -11,26 +11,6 @@
   </div>
   <!-- School Name     -->
   <div class="searchGroup">
-    <!--     <div class="mainSearch container">
-    <div class="row">
-      <div class="col-xs-1 col-sm-10 col-md-10 col-lg-10">
-        <h2>Name</h2>
-      </div>
-      <div class="col-xs-1 col-sm-1 col-md-1 lg-col-lg-1">
-        <button type="submit" class="btn btn-link" ng-click="showName = !showName">
-          <span class="glyphicon glyphicon-chevron-down"></span></button>
-      </div>
-    </div>
-  </div>
-    <div class="container" ng-show="showName">
-    <div class="col-xs-12 col-sm-12 col-md-12 lg-col-lg-12">
-      <p class="lead">
-        <div ng-init="school='Seattle University'">
-          <label for="school"><input type="text" name="school" ng-model="school"></label>
-      </p>
-      </div>
-    </div>
- -->
     <!-- likeMe     -->
     <div class="searchGroup">
       <div class="likeMe container">
@@ -97,8 +77,6 @@
           <rzslider rz-slider-model="borrowedSlider.minValue" rz-slider-high="borrowedSlider.maxValue" rz-slider-options="borrowedSlider.options"></rzslider>
           <p>Debt at Graduation</p>
           <rzslider rz-slider-model="debtSlider.minValue" rz-slider-high="debtSlider.maxValue" rz-slider-options="debtSlider.options"></rzslider>
-          <p>% of Graduates making more than a High School graduate 10 years after graduation</p>
-          <rzslider rz-slider-model="hsSlider.minValue" rz-slider-high="hsSlider.maxValue" rz-slider-options="hsSlider.options"></rzslider>
         </div>
       </div>
     </div>
@@ -137,11 +115,7 @@
 </div>
 <div class="results">
   <!--     <div ng-if="searchQuery"> -->
-  <div dir-paginate="metadata in schoolFound.metadata | itemsPerPage:1 ">
-    <p ng-show="metadata.total = 0">No schools found. Revise your filters try again</p>
-    <p ng-show="metadata.total = 100">{{schools.total}} results. Consider revising your filter. The first 100 results are below</p>
-  </div>.
-  <div dir-paginate="schools in schoolFound.results | itemsPerPage:3 ">
+  <div dir-paginate="schools in schoolFound.results | itemsPerPage:10 ">
     <div class="container col-xs-12 col-sm-4 col-md-4 col-lg-4 col-lg-4 schoolResults">
 
       <div class="row schoolHeader">

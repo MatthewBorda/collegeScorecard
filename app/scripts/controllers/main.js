@@ -251,20 +251,8 @@ angular.module('collegeScorecardApp')
     //     };
 
     // Slider controls
-   
-  $scope.borrowedSlider = {
-      minValue: 1,
-      maxValue: 100,
-      options: {
-        floor: 0,
-        ceil: 100,
-        step: 10,
-        minRange: 10,
-        maxRange: 100,
-        pushRange: true
-      }
-    };  
-  $scope.completionSlider = {
+
+    $scope.borrowedSlider = {
       minValue: 1,
       maxValue: 100,
       options: {
@@ -276,7 +264,7 @@ angular.module('collegeScorecardApp')
         pushRange: true
       }
     };
-  $scope.hsSlider = {
+    $scope.completionSlider = {
       minValue: 1,
       maxValue: 100,
       options: {
@@ -288,19 +276,7 @@ angular.module('collegeScorecardApp')
         pushRange: true
       }
     };
-  $scope.retainedSlider = {
-        minValue: 1,
-      maxValue: 100,
-      options: {
-        floor: 0,
-        ceil: 100,
-        step: 10,
-        minRange: 10,
-        maxRange: 100,
-        pushRange: true
-      }
-    };
-  $scope.femaleSlider = {
+    $scope.hsSlider = {
       minValue: 1,
       maxValue: 100,
       options: {
@@ -312,7 +288,7 @@ angular.module('collegeScorecardApp')
         pushRange: true
       }
     };
-  $scope.acceptanceSlider = {
+    $scope.retainedSlider = {
       minValue: 1,
       maxValue: 100,
       options: {
@@ -324,7 +300,7 @@ angular.module('collegeScorecardApp')
         pushRange: true
       }
     };
-  $scope.raceSlider = {
+    $scope.femaleSlider = {
       minValue: 1,
       maxValue: 100,
       options: {
@@ -336,7 +312,7 @@ angular.module('collegeScorecardApp')
         pushRange: true
       }
     };
-  $scope.genSlider = {
+    $scope.acceptanceSlider = {
       minValue: 1,
       maxValue: 100,
       options: {
@@ -348,7 +324,7 @@ angular.module('collegeScorecardApp')
         pushRange: true
       }
     };
-  $scope.pellSlider = {
+    $scope.raceSlider = {
       minValue: 1,
       maxValue: 100,
       options: {
@@ -360,7 +336,7 @@ angular.module('collegeScorecardApp')
         pushRange: true
       }
     };
-  $scope.priceSlider = {
+    $scope.genSlider = {
       minValue: 1,
       maxValue: 100,
       options: {
@@ -372,8 +348,32 @@ angular.module('collegeScorecardApp')
         pushRange: true
       }
     };
- 
-  $scope.costSlider = {
+    $scope.pellSlider = {
+      minValue: 1,
+      maxValue: 100,
+      options: {
+        floor: 0,
+        ceil: 100,
+        step: 10,
+        minRange: 10,
+        maxRange: 100,
+        pushRange: true
+      }
+    };
+    $scope.priceSlider = {
+      minValue: 1,
+      maxValue: 100,
+      options: {
+        floor: 0,
+        ceil: 100,
+        step: 10,
+        minRange: 10,
+        maxRange: 100,
+        pushRange: true
+      }
+    };
+
+    $scope.costSlider = {
       minValue: 0,
       maxValue: 100000,
       options: {
@@ -464,7 +464,7 @@ angular.module('collegeScorecardApp')
         pushRange: true
       }
     };
- $scope.classSlider = {
+    $scope.classSlider = {
       minValue: 0,
       maxValue: 60000,
       options: {
