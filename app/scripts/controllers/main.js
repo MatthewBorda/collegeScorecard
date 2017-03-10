@@ -35,8 +35,8 @@ angular.module('collegeScorecardApp')
         //         
         minDebt: $scope.debtSlider.minValue,
         maxDebt: $scope.debtSlider.maxValue,
-        minLoan: $scope.borrowedSlider.minValue,
-        maxLoan: $scope.borrowedSlider.maxValue,
+        minLoan: $scope.borrowedSlider.minValue / 100,
+        maxLoan: $scope.borrowedSlider.maxValue / 100,
         minPrice: $scope.netSlider.minValue,
         maxPrice: $scope.netSlider.maxValue,
         minTuition: $scope.tuitionSlider.minValue,
@@ -264,14 +264,14 @@ angular.module('collegeScorecardApp')
       }
     };
     $scope.borrowedSlider = {
-      minValue: 0,
-      maxValue: 1,
+      minValue: 1,
+      maxValue: 100,
       options: {
         floor: 0,
-        ceil: 1,
-        step: 0.1,
-        minRange: 0.1,
-        maxRange: 1,
+        ceil: 100,
+        step: 10,
+        minRange: 10,
+        maxRange: 100,
         pushRange: true
       }
     };
