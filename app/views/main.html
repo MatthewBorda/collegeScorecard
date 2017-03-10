@@ -143,10 +143,11 @@
 </div>
   <div class="results">
 <!--     <div ng-if="searchQuery"> -->
-      
+    <div dir-paginate="schools in schoolFound.metadata">
+    <p ng-show="schools.total = 0">No schools found. Revise your filters try again</p>
+    <p ng-show="schools.total = 100">{{schools.total}} results. Consider revising your filter. The first 100 results are below</p>
+   
     <div dir-paginate="schools in schoolFound.results | itemsPerPage:3 ">
-     <p ng-show="schools.metadata.total = 0">No schools found. Revise your filters try again</p>
-      <p ng-show="schools.metadata.total = 100">{{schools.metadata.total}} results. Consider revising your filter. The first 100 results are below</p>
       <div class="container col-xs-12 col-sm-4 col-md-4 col-lg-4 col-lg-4 schoolResults">
 
           <div class="row schoolHeader">
