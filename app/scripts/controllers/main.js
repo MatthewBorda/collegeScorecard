@@ -18,18 +18,18 @@ angular.module('collegeScorecardApp')
         //         query: $scope.school,
         minClass: $scope.classSlider.minValue,
         maxClass: $scope.classSlider.maxValue,
-        minWomen: $scope.femaleSlider.minValue,
-        maxWomen: $scope.femaleSlider.maxValue,
-        minWhite: $scope.raceSlider.minValue,
-        maxWhite: $scope.raceSlider.maxValue,
-        minPell: $scope.pellSlider.minValue,
-        maxPell: $scope.pellSlider.maxValue,
-        minFirst: $scope.genSlider.minValue,
-        maxFirst: $scope.genSlider.maxValue,
-        minFull: $scope.retainedSlider.minValue,
-        maxFull: $scope.retainedSlider.maxValue,
-        minAdmit: $scope.acceptanceSlider.minValue,
-        maxAdmit: $scope.acceptanceSlider.maxValue,
+        minWomen: $scope.femaleSlider.minValue / 100,
+        maxWomen: $scope.femaleSlider.maxValue / 100,
+        minWhite: $scope.raceSlider.minValue / 100,
+        maxWhite: $scope.raceSlider.maxValue / 100,
+        minPell: $scope.pellSlider.minValue / 100,
+        maxPell: $scope.pellSlider.maxValue / 100,
+        minFirst: $scope.genSlider.minValue / 100,
+        maxFirst: $scope.genSlider.maxValue / 100,
+        minFull: $scope.retainedSlider.minValue / 100,
+        maxFull: $scope.retainedSlider.maxValue / 100,
+        minAdmit: $scope.acceptanceSlider.minValue / 100,
+        maxAdmit: $scope.acceptanceSlider.maxValue / 100,
         minSAT: $scope.SATslider.minValue,
         maxSAT: $scope.SATslider.maxValue,
         //         
@@ -44,12 +44,12 @@ angular.module('collegeScorecardApp')
         minCost: $scope.costSlider.minValue,
         maxCost: $scope.costSlider.maxValue,
         //         
-        minComp: $scope.completionSlider.minValue,
-        maxComp: $scope.completionSlider.maxValue,
+        minComp: $scope.completionSlider.minValue / 100,
+        maxComp: $scope.completionSlider.maxValue / 100,
         minEarn: $scope.earning7Slider.minValue,
         maxEarn: $scope.earning7Slider.maxValue,
-        minHS: $scope.hsSlider.minValue,
-        maxHS: $scope.hsSlider.maxValue,
+        minHS: $scope.hsSlider.minValue / 100,
+        maxHS: $scope.hsSlider.maxValue / 100,
       });
       //      $scope.searchQuery = $scope.school;
       //       $scope.searchmaxClass = $scope.classSlider.maxValue;
@@ -251,19 +251,20 @@ angular.module('collegeScorecardApp')
     //     };
 
     // Slider controls
-    $scope.classSlider = {
-      minValue: 0,
-      maxValue: 60000,
+   
+  $scope.borrowedSlider = {
+      minValue: 1,
+      maxValue: 100,
       options: {
         floor: 0,
-        ceil: 60000,
-        step: 1000,
-        minRange: 1000,
-        maxRange: 60000,
+        ceil: 100,
+        step: 10,
+        minRange: 10,
+        maxRange: 100,
         pushRange: true
       }
-    };
-    $scope.borrowedSlider = {
+    };  
+  $scope.completionSlider = {
       minValue: 1,
       maxValue: 100,
       options: {
@@ -275,117 +276,104 @@ angular.module('collegeScorecardApp')
         pushRange: true
       }
     };
-  
-  $scope.completionSlider = {
-      minValue: 0,
-      maxValue: 1,
-      options: {
-        floor: 0,
-        ceil: 1,
-        step: 0.1,
-        minRange: 0.1,
-        maxRange: 1,
-        pushRange: true
-      }
-    };
   $scope.hsSlider = {
-      minValue: 0,
-      maxValue: 1,
+      minValue: 1,
+      maxValue: 100,
       options: {
         floor: 0,
-        ceil: 1,
-        step: 0.1,
-        minRange: 0.1,
-        maxRange: 1,
+        ceil: 100,
+        step: 10,
+        minRange: 10,
+        maxRange: 100,
         pushRange: true
       }
     };
-
-    $scope.retainedSlider = {
-      minValue: 0,
-      maxValue: 1,
+  $scope.retainedSlider = {
+        minValue: 1,
+      maxValue: 100,
       options: {
         floor: 0,
-        ceil: 1,
-        step: 0.1,
-        minRange: 0.1,
-        maxRange: 1,
+        ceil: 100,
+        step: 10,
+        minRange: 10,
+        maxRange: 100,
         pushRange: true
       }
     };
-    $scope.femaleSlider = {
-      minValue: 0,
-      maxValue: 1,
+  $scope.femaleSlider = {
+      minValue: 1,
+      maxValue: 100,
       options: {
         floor: 0,
-        ceil: 1,
-        step: 0.1,
-        minRange: 0.1,
-        maxRange: 1,
+        ceil: 100,
+        step: 10,
+        minRange: 10,
+        maxRange: 100,
         pushRange: true
       }
     };
-    $scope.acceptanceSlider = {
-      minValue: 0,
-      maxValue: 1,
+  $scope.acceptanceSlider = {
+      minValue: 1,
+      maxValue: 100,
       options: {
         floor: 0,
-        ceil: 1,
-        step: 0.1,
-        minRange: 0.1,
-        maxRange: 1,
+        ceil: 100,
+        step: 10,
+        minRange: 10,
+        maxRange: 100,
         pushRange: true
       }
     };
-    $scope.SATslider = {
-      minValue: 0,
-      maxValue: 1600,
+  $scope.raceSlider = {
+      minValue: 1,
+      maxValue: 100,
       options: {
         floor: 0,
-        ceil: 1600,
-        step: 1,
-        minRange: 100,
-        maxRange: 1600,
+        ceil: 100,
+        step: 10,
+        minRange: 10,
+        maxRange: 100,
         pushRange: true
       }
     };
-    $scope.raceSlider = {
-      minValue: 0,
-      maxValue: 1,
+  $scope.genSlider = {
+      minValue: 1,
+      maxValue: 100,
       options: {
         floor: 0,
-        ceil: 1,
-        step: 0.1,
-        minRange: 0.1,
-        maxRange: 1,
+        ceil: 100,
+        step: 10,
+        minRange: 10,
+        maxRange: 100,
         pushRange: true
       }
     };
-    $scope.genSlider = {
-      minValue: 0,
-      maxValue: 1,
+  $scope.pellSlider = {
+      minValue: 1,
+      maxValue: 100,
       options: {
         floor: 0,
-        ceil: 1,
-        step: 0.1,
-        minRange: 0.1,
-        maxRange: 1,
+        ceil: 100,
+        step: 10,
+        minRange: 10,
+        maxRange: 100,
         pushRange: true
       }
     };
-    $scope.pellSlider = {
-      minValue: 0,
-      maxValue: 1,
+  $scope.priceSlider = {
+      minValue: 1,
+      maxValue: 100,
       options: {
         floor: 0,
-        ceil: 1,
-        step: 0.1,
-        minRange: 0.1,
-        maxRange: 1,
+        ceil: 100,
+        step: 10,
+        minRange: 10,
+        maxRange: 100,
         pushRange: true
       }
     };
-    $scope.costSlider = {
+ 
+  $scope.costSlider = {
       minValue: 0,
       maxValue: 100000,
       options: {
@@ -424,20 +412,6 @@ angular.module('collegeScorecardApp')
         pushRange: true
       }
     };
-
-    $scope.priceSlider = {
-      minValue: 0,
-      maxValue: 1,
-      options: {
-        floor: 0,
-        ceil: 1,
-        step: 0.1,
-        minRange: 0.1,
-        maxRange: 1,
-        pushRange: true
-      }
-    };
-
     $scope.debtSlider = {
       minValue: 0,
       maxValue: 100000,
@@ -448,18 +422,6 @@ angular.module('collegeScorecardApp')
         step: 1000,
         minRange: 1000,
         maxRange: 100000,
-        pushRange: true
-      }
-    };
-    $scope.loanSlider = {
-      minValue: 0,
-      maxValue: 1,
-      options: {
-        floor: 0,
-        ceil: 1,
-        step: 0.1,
-        minRange: 0.1,
-        maxRange: 1,
         pushRange: true
       }
     };
@@ -502,5 +464,28 @@ angular.module('collegeScorecardApp')
         pushRange: true
       }
     };
-
+ $scope.classSlider = {
+      minValue: 0,
+      maxValue: 60000,
+      options: {
+        floor: 0,
+        ceil: 60000,
+        step: 1000,
+        minRange: 1000,
+        maxRange: 60000,
+        pushRange: true
+      }
+    };
+    $scope.SATslider = {
+      minValue: 0,
+      maxValue: 1600,
+      options: {
+        floor: 0,
+        ceil: 1600,
+        step: 1,
+        minRange: 100,
+        maxRange: 1600,
+        pushRange: true
+      }
+    };
   });
