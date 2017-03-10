@@ -9,7 +9,8 @@
        </h2>
     </div>
   </div>
-    <div class="about">
+    <div class="searchGroup">
+      <div class="about container">
       <div class="row">
         <h2>About</h2><button type="submit" class="btn btn-link" ng-click="showAbout = !showAbout">
           <span class="glyphicon glyphicon-chevron-down"></span></button>
@@ -27,6 +28,7 @@
         </div>
       </div>  
   </div>
+  </div>
     <!-- likeMe     -->
     <div class="searchGroup">
       <div class="likeMe container">
@@ -40,6 +42,7 @@
           </div>
         </div>
       </div>
+     <!-- likeMe     -->
       <div class="container" ng-show="showLike">
         <div class="col-xs-12 col-sm-12 col-md-12 lg-col-lg-12">
           <!-- Search fields          -->
@@ -126,64 +129,9 @@
     <div class="searchButton text-center">
       <p><button class="btn btn-lg  btn-primary" ng-click="findSchools()">Find Schools</button></p>
     </div>
-</div>
-<div class="results">
-  <!--     <div ng-if="searchQuery"> -->
-  <div dir-paginate="schools in schoolFound.results | itemsPerPage:10 ">
-    <div class="container col-xs-12 col-sm-4 col-md-4 col-lg-4 col-lg-4 schoolResults">
-
-      <div class="row schoolHeader">
-        <div class="row-fluid schoolHeight">
-          <h4><b> <a ng-href="https://{{schools.school.school_url}}">{{schools.school.name}} </a></b></h4>
-        </div>
-        <p>{{schools.school.city}}, {{schools.school.state}}</p>
-        <p><b>{{schools["2014"].student.size | number}}
-                  <span class="empty" ng-show="!{{schools['2014'].student.size}}">-</span></b> undergraduate students</p>
-      </div>
-      <div class="schoolDetails">
-        <div class="schoolAcceptance lineAbove">
-          <p> <b>{{((schools["2014"].admissions.admission_rate.overall) *100).toFixed(0)}}%
-                <span class="empty" ng-show="!schools['2014'].admissions.admission_rate.average.overall">-</span></b> applicants admitted </p>
-        </div>
-        <div class="schoolTestSAT lineAbove">
-          <p><b>{{schools["2014"].admissions.sat_scores.average.overall | number}}  
-                  <span class="empty" ng-show="!schools['2014'].admissions.sat_scores.average.overall">-</span></b> average SAT score</p>
-        </div>
-        <div class="schoolCost lineAbove">
-          <p><b>{{schools["2014"].cost.attendance.academic_year | currency:"$":0}}
-                <span class="empty" ng-show="!schools['2014'].cost.attendance.academic_year">-</span></b> cost of attendance</p>
-        </div>
-        <div class="schoolPrice lineAbove">
-          <p><b>{{schools["2014"].cost.avg_net_price.overall | currency:"$":0}}
-                <span class="empty" ng-show="!schools['2014'].cost.avg_net_price.overall">-</span></b> average net price</p>
-        </div>
-        <div class="schoolDebt lineAbove">
-          <p> <b>{{schools["2014"].aid.median_debt.completers.overall | currency:"$":0}}
-                <span class="empty" ng-show="!schools['2014'].aid.median_debt.completers.overall">-</span></b> debt at graduation </p>
-        </div>
-        <div class="schoolCompletions lineAbove">
-          <p><b> {{((schools["2014"].completion.completion_rate_4yr_150nt) *100).toFixed(0)}}%
-                <span class="empty" ng-show="!schools['2014'].completion.completion_rate_4yr_150nt">-</span></b> 150% completion rate </span>
-          </p>
-        </div>
-        <div class="schoolOutcomes lineAbove">
-          <p><b>{{schools["2012"].earnings["10_yrs_after_entry"].median |  currency:"$":0}}
-                <span class="empty" ng-show="!schools['2012'].earnings['10_yrs_after_entry'].median">-</span></b> median income</p>
-        </div>
-        <div>
-          <p><button class="btn btn-sm btn-primary" ng-click="saveSchool(schools)">Compare</button></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container clearfix">
-    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 col-lg-12">
-      <dir-pagination-controls max-size="3" direction-links="true" boundary-links="true">
-      </dir-pagination-controls>
-    </div>
-  </div>
-</div>
-<div class="definitions">
+    <!--Definitions      -->
+    <div class = "searchGroup">
+      <div class="definitions">
   <H1>Definitions</H1>
   <table class ="definitionTable">
 <p>
@@ -291,6 +239,66 @@
     
 </table>
 </div>
+    </div>
+</div>
+<div class="results">
+  <!--     <div ng-if="searchQuery"> -->
+  <div dir-paginate="schools in schoolFound.results | itemsPerPage:10 ">
+    <div class="container col-xs-12 col-sm-4 col-md-4 col-lg-4 col-lg-4 schoolResults">
+
+      <div class="row schoolHeader">
+        <div class="row-fluid schoolHeight">
+          <h4><b> <a ng-href="https://{{schools.school.school_url}}">{{schools.school.name}} </a></b></h4>
+        </div>
+        <p>{{schools.school.city}}, {{schools.school.state}}</p>
+        <p><b>{{schools["2014"].student.size | number}}
+                  <span class="empty" ng-show="!{{schools['2014'].student.size}}">-</span></b> undergraduate students</p>
+      </div>
+      <div class="schoolDetails">
+        <div class="schoolAcceptance lineAbove">
+          <p> <b>{{((schools["2014"].admissions.admission_rate.overall) *100).toFixed(0)}}%
+                <span class="empty" ng-show="!schools['2014'].admissions.admission_rate.average.overall">-</span></b> applicants admitted </p>
+        </div>
+        <div class="schoolTestSAT lineAbove">
+          <p><b>{{schools["2014"].admissions.sat_scores.average.overall | number}}  
+                  <span class="empty" ng-show="!schools['2014'].admissions.sat_scores.average.overall">-</span></b> average SAT score</p>
+        </div>
+        <div class="schoolCost lineAbove">
+          <p><b>{{schools["2014"].cost.attendance.academic_year | currency:"$":0}}
+                <span class="empty" ng-show="!schools['2014'].cost.attendance.academic_year">-</span></b> cost of attendance</p>
+        </div>
+        <div class="schoolPrice lineAbove">
+          <p><b>{{schools["2014"].cost.avg_net_price.overall | currency:"$":0}}
+                <span class="empty" ng-show="!schools['2014'].cost.avg_net_price.overall">-</span></b> average net price</p>
+        </div>
+        <div class="schoolDebt lineAbove">
+          <p> <b>{{schools["2014"].aid.median_debt.completers.overall | currency:"$":0}}
+                <span class="empty" ng-show="!schools['2014'].aid.median_debt.completers.overall">-</span></b> debt at graduation </p>
+        </div>
+        <div class="schoolCompletions lineAbove">
+          <p><b> {{((schools["2014"].completion.completion_rate_4yr_150nt) *100).toFixed(0)}}%
+                <span class="empty" ng-show="!schools['2014'].completion.completion_rate_4yr_150nt">-</span></b> 150% completion rate </span>
+          </p>
+        </div>
+        <div class="schoolOutcomes lineAbove">
+          <p><b>{{schools["2012"].earnings["10_yrs_after_entry"].median |  currency:"$":0}}
+                <span class="empty" ng-show="!schools['2012'].earnings['10_yrs_after_entry'].median">-</span></b> median income</p>
+        </div>
+        <div>
+          <p><button class="btn btn-sm btn-primary" ng-click="saveSchool(schools)">Compare</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container clearfix">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 col-lg-12">
+      <dir-pagination-controls max-size="3" direction-links="true" boundary-links="true">
+      </dir-pagination-controls>
+    </div>
+  </div>
+</div>
+
+
 <div class="saved grid">
   <div>
     <H1>Compare saved schools</H1>
