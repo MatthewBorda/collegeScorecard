@@ -44,12 +44,12 @@ angular.module('collegeScorecardApp')
         minCost: $scope.costSlider.minValue,
         maxCost: $scope.costSlider.maxValue,
         //         
-        minComp: $scope.completionSlider,
-        maxComp: $scope.completionSlider,
-        minEarn: $scope.earning7Slider,
-        maxEarn: $scope.earning7Slider,
-        minHS: $scope.hsSlider,
-        maxHS: $scope.hsSlider,
+        minComp: $scope.completionSlider.minValue,
+        maxComp: $scope.completionSlider.maxValue,
+        minEarn: $scope.earning7Slider.minValue,
+        maxEarn: $scope.earning7Slider.maxValue,
+        minHS: $scope.hsSlider.minValue,
+        maxHS: $scope.hsSlider.maxValue,
       });
       //      $scope.searchQuery = $scope.school;
       //       $scope.searchmaxClass = $scope.classSlider.maxValue;
