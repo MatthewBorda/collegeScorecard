@@ -12,8 +12,8 @@
     <div class="searchGroup">
       <div class="about container">
       <div class="row">
-        <h2>About</h2><button type="submit" class="btn btn-link" ng-click="showAbout = !showAbout">
-          <span class="glyphicon glyphicon-chevron-down"></span></button>
+        <h2>About<button type="submit" class="btn btn-link" ng-click="showAbout = !showAbout">
+          <span class="glyphicon glyphicon-chevron-down"></span></button></h2>
        </div>
        <div class="container" ng-show="showAbout">
         <div class="col-xs-12 col-sm-12 col-md-12 lg-col-lg-12">
@@ -244,7 +244,7 @@
 <div class="results container-fluid">
   <!--     <div ng-if="searchQuery"> -->
   <div dir-paginate="schools in schoolFound.results | itemsPerPage:10 ">
-    <div class="container col-xs-12 col-sm-4 col-md-4 col-lg-4 col-lg-4 schoolResults">
+    <div class="container col-xs-12 col-sm-3 col-md-3 col-lg-3 col-lg-3 schoolResults">
 
       <div class="row schoolHeader">
         <div class="row-fluid schoolHeight">
@@ -257,7 +257,8 @@
       <div class="schoolDetails">
         <div class="schoolAcceptance lineAbove">
           <p> <b>{{((schools["2014"].admissions.admission_rate.overall) *100).toFixed(0)}}%
-                <span class="empty" ng-show="!schools['2014'].admissions.admission_rate.average.overall">-</span></b> applicants admitted </p>
+                <span class="empty" ng-show="!schools['2014'].admissions.admission_rate.overall">-</span></b> applicants admitted 
+          </p>
         </div>
         <div class="schoolTestSAT lineAbove">
           <p><b>{{schools["2014"].admissions.sat_scores.average.overall | number}}  
