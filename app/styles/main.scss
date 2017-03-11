@@ -66,6 +66,22 @@ font-family: Montserrat, "Helvetica Neue", Helvetica, arial, sans-serif;
   width: 100%;
 
 }
+/*Definitions  */
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 2px solid #c1c1c1;
+    text-align: left;
+    padding: 2px;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -78,7 +94,6 @@ font-family: Montserrat, "Helvetica Neue", Helvetica, arial, sans-serif;
 .header {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
-    
   font-weight: bold;
   color:#ffffff
       

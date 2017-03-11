@@ -43,22 +43,16 @@
       </div>
     </div>
   </div>
-
+    </div>
   <div class="container mainBody">
     <div ng-view=""></div>
   </div>
 
   <div class="footer">
     <div class="container text-center">
-            <p>
-        This is personal project and is in no way affiliated with the Department of Education
-      </p> 
-      <p>
-        <a href="https://collegescorecard.ed.gov">The College Scorecard</a>
-      </p>
-      <p>
-        Powered by <a href="https://collegescorecard.ed.gov/data/">College Scorecard Data</a>
-      </p>
+            <p><small>This is personal project and is in no way affiliated with the Department of Education</small></p> 
+      <p><small><a href="https://collegescorecard.ed.gov">The College Scorecard</a></small></p>
+      <p><small>Powered by <a href="https://collegescorecard.ed.gov/data/">College Scorecard Data</a></small></p>
       
     </div>
   </div>
@@ -75,6 +69,9 @@
 
     ga('create', 'UA-93505574-1');
     ga('send', 'pageview');
+//    on search click event
+    ga('send', 'searchData'); 
+    
   </script>
 
   <!-- build:js(.) scripts/vendor.js -->
