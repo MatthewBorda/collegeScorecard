@@ -11,5 +11,8 @@
         r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
     }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-XXXXX-X');
-    ga('send', 'pageview');</script> <script src="scripts/vendor.2ecface7.js"></script> <script src="scripts/scripts.dd524924.js"></script> </body> </html>
+    ga('create', 'UA-93505574-1');
+    ga('send', 'pageview');
+    $scope.findSchools = function () {
+    $window.ga('send', 'event', 'Click', 'Search'); //This would log a GA Event
+      };</script> <script src="scripts/vendor.2ecface7.js"></script> <script src="scripts/scripts.dd524924.js"></script> </body> </html>
