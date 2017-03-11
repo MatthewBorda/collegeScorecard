@@ -1,10 +1,10 @@
-<!doctype html> <html> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.f04799b0.css"> <link rel="stylesheet" href="styles/main.5a122819.css"> <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDNVX4jb2QDDKPgxQ38dwIafC-GPEpnh0A"></script>  </head> <body ng-app="collegeScorecardApp"> <!--[if lte IE 8]>
+<!doctype html> <html> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.f04799b0.css"> <link rel="stylesheet" href="styles/main.bbe98721.css"> <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDNVX4jb2QDDKPgxQ38dwIafC-GPEpnh0A"></script>  </head> <body ng-app="collegeScorecardApp"> <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]--> <!-- Add your site or application content here --> <div class="header"> <div class="navbar navbar-default" role="navigation"> <div class="container"> <div class="navbar-header"> <a class="navbar-brand" href="#/">College Scorecard Comparisons</a> <!--           <md-button class="class=" glyphicon glyphicon-info-sign "" aria-label="Refresh">
             <md-tooltip md-direction="bottom">Test</md-tooltip>
             <md-icon md-svg-src="img/icons/ic_refresh_24px.svg" style="width: 24px; height: 24px">
             </md-icon>
-          </md-button> --> </div> </div> </div> <div class="container mainBody"> <div ng-view=""></div> </div> <div class="footer"> <div class="container text-center"> <p> This is personal project and is in no way affiliated with the Department of Education </p> <p> <a href="https://collegescorecard.ed.gov">The College Scorecard</a> </p> <p> Powered by <a href="https://collegescorecard.ed.gov/data/">College Scorecard Data</a> </p> </div> </div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>! function(A, n, g, u, l, a, r) {
+          </md-button> --> </div> </div> </div> </div> <div class="container mainBody"> <div ng-view=""></div> </div> <div class="footer"> <div class="container text-center"> <p><small>This is personal project and is in no way affiliated with the Department of Education</small></p> <p><small><a href="https://collegescorecard.ed.gov">The College Scorecard</a></small></p> <p><small>Powered by <a href="https://collegescorecard.ed.gov/data/">College Scorecard Data</a></small></p> </div> </div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>! function(A, n, g, u, l, a, r) {
       A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
           (A[l].q = A[l].q || []).push(arguments)
         }, A[l].l = +new Date, a = n.createElement(g),
@@ -12,4 +12,6 @@
     }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-93505574-1');
-    ga('send', 'pageview');</script> <script src="scripts/vendor.2ecface7.js"></script> <script src="scripts/scripts.f02e2158.js"></script> </div></body> </html>
+    ga('send', 'pageview');
+//    on search click event
+    ga('send', 'searchData');</script> <script src="scripts/vendor.2ecface7.js"></script> <script src="scripts/scripts.70d47044.js"></script> </body> </html>
