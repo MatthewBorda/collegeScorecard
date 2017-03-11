@@ -228,11 +228,11 @@ angular.module('collegeScorecardApp')
       ]
     };
     $scope.removeSchool = function() {
-      alert($localStorage.compareSchools.id);
+      alert($scope.gridOptions.data.id);
     };
-$localStorage.$reset({
-    counter: 42
-});
+// $localStorage.$reset({
+//     counter: 42
+// });
     $scope.savedSchools = $localStorage.compareSchools;
     //Search filters 
     //     $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
