@@ -16,7 +16,7 @@
           <span class="glyphicon glyphicon-chevron-down"></span></button></h2>
       </div>
       <div class="container" ng-show="showAbout">
-        <div class="col-xs-12 col-sm-12 col-md-12 lg-col-lg-12">
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
           <p>
             The College Scorecard project is intended to provide students and parents a full understanding of the cost and benefits of higher education. This project expands on that intention by providing users the ability to discover and compare schools based on
             a a school's student profile, costs, and outcomes.
@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class="container" ng-show="showDefinitions">
-      <div class="col-xs-12 col-sm-12 col-md-12 lg-col-lg-12">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <table class="definitionTable">
           <p>All data are from the 2014/15 academic year unless otherwise noted. This is the most recent year of data available.</p>
           <tr>
@@ -157,7 +157,7 @@
     </div>
     <!-- likeMe     -->
     <div class="container" ng-show="showLike">
-      <div class="col-xs-12 col-sm-12 col-md-12 lg-col-lg-12">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <!-- Search fields          -->
         <p>Undergraduate Size</p>
         <div>
@@ -194,7 +194,7 @@
       </div>
     </div>
     <div class="container" ng-show="showCost">
-      <div class="col-xs-12 col-sm-12 col-md-12 lg-col-lg-12">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <!-- Search fields          -->
         <p>Average Net Price of Attendance</p>
         <rzslider rz-slider-model="netSlider.minValue" rz-slider-high="netSlider.maxValue" rz-slider-options="netSlider.options"></rzslider>
@@ -220,7 +220,7 @@
       </div>
     </div>
     <div class="container" ng-show="showOutcomes">
-      <div class="col-xs-12 col-sm-12 col-md-12 lg-col-lg-12">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <!-- Search fields          -->
         <p>150% Normal Time Completion Rates</p>
         <rzslider rz-slider-model="completionSlider.minValue" rz-slider-high="completionSlider.maxValue" rz-slider-options="completionSlider.options"></rzslider>
@@ -238,69 +238,69 @@
   </div>
   <!--Definitions      -->
 </div>
-  <div class="results container-fluid">
-    <!--     <div ng-if="searchQuery"> -->
-    <div dir-paginate="schools in schoolFound.results | itemsPerPage:8 ">
-      <div class="container col-xs-12 col-sm-3 col-md-3 col-lg-3 col-lg-3 schoolResults">
+<div class="results container-fluid">
+  <!--     <div ng-if="searchQuery"> -->
+  <div dir-paginate="schools in schoolFound.results | itemsPerPage:8 ">
+    <div class="container col-xs-12 col-sm-3 col-md-3 col-lg-3 col-lg-3 col-xl-3 schoolResults">
 
-        <div class="row schoolHeader">
-          <div class="row-fluid schoolHeight">
-            <h4><b> <a ng-href="https://{{schools.school.school_url}}">{{schools.school.name}} </a></b></h4>
-          </div>
-          <p>{{schools.school.city}}, {{schools.school.state}}</p>
-          <p><b>{{schools["2014"].student.size | number}}
+      <div class="row schoolHeader">
+        <div class="row-fluid schoolHeight">
+          <h4><b> <a ng-href="https://{{schools.school.school_url}}">{{schools.school.name}} </a></b></h4>
+        </div>
+        <p>{{schools.school.city}}, {{schools.school.state}}</p>
+        <p><b>{{schools["2014"].student.size | number}}
                   <span class="empty" ng-show="!{{schools['2014'].student.size}}">-</span></b> undergraduate students</p>
-        </div>
-        <div class="schoolDetails">
-          <div class="schoolAcceptance lineAbove">
-            <p> <b>{{((schools["2014"].admissions.admission_rate.overall) *100).toFixed(0)}}%
+      </div>
+      <div class="schoolDetails">
+        <div class="schoolAcceptance lineAbove">
+          <p> <b>{{((schools["2014"].admissions.admission_rate.overall) *100).toFixed(0)}}%
                 <span class="empty" ng-show="!schools['2014'].admissions.admission_rate.overall">-</span></b> applicants admitted
-            </p>
-          </div>
-          <div class="schoolTestSAT lineAbove">
-            <p><b>{{schools["2014"].admissions.sat_scores.average.overall | number}}  
+          </p>
+        </div>
+        <div class="schoolTestSAT lineAbove">
+          <p><b>{{schools["2014"].admissions.sat_scores.average.overall | number}}  
                   <span class="empty" ng-show="!schools['2014'].admissions.sat_scores.average.overall">-</span></b> average SAT score</p>
-          </div>
-          <div class="schoolCost lineAbove">
-            <p><b>{{schools["2014"].cost.attendance.academic_year | currency:"$":0}}
+        </div>
+        <div class="schoolCost lineAbove">
+          <p><b>{{schools["2014"].cost.attendance.academic_year | currency:"$":0}}
                 <span class="empty" ng-show="!schools['2014'].cost.attendance.academic_year">-</span></b> cost of attendance</p>
-          </div>
-          <div class="schoolPrice lineAbove">
-            <p><b>{{schools["2014"].cost.avg_net_price.overall | currency:"$":0}}
+        </div>
+        <div class="schoolPrice lineAbove">
+          <p><b>{{schools["2014"].cost.avg_net_price.overall | currency:"$":0}}
                 <span class="empty" ng-show="!schools['2014'].cost.avg_net_price.overall">-</span></b> average net price</p>
-          </div>
-          <div class="schoolDebt lineAbove">
-            <p> <b>{{schools["2014"].aid.median_debt.completers.overall | currency:"$":0}}
+        </div>
+        <div class="schoolDebt lineAbove">
+          <p> <b>{{schools["2014"].aid.median_debt.completers.overall | currency:"$":0}}
                 <span class="empty" ng-show="!schools['2014'].aid.median_debt.completers.overall">-</span></b> debt at graduation </p>
-          </div>
-          <div class="schoolCompletions lineAbove">
-            <p><b> {{((schools["2014"].completion.completion_rate_4yr_150nt) *100).toFixed(0)}}%
+        </div>
+        <div class="schoolCompletions lineAbove">
+          <p><b> {{((schools["2014"].completion.completion_rate_4yr_150nt) *100).toFixed(0)}}%
                 <span class="empty" ng-show="!schools['2014'].completion.completion_rate_4yr_150nt">-</span></b> 150% completion rate </span>
-            </p>
-          </div>
-          <div class="schoolOutcomes lineAbove">
-            <p><b>{{schools["2012"].earnings["10_yrs_after_entry"].median |  currency:"$":0}}
+          </p>
+        </div>
+        <div class="schoolOutcomes lineAbove">
+          <p><b>{{schools["2012"].earnings["10_yrs_after_entry"].median |  currency:"$":0}}
                 <span class="empty" ng-show="!schools['2012'].earnings['10_yrs_after_entry'].median">-</span></b> median income</p>
-          </div>
-          <div>
-            <p><button class="btn btn-sm btn-primary" ng-click="saveSchool(schools)">Compare</button></p>
-          </div>
+        </div>
+        <div>
+          <p><button class="btn btn-sm btn-primary" ng-click="saveSchool(schools)">Compare</button></p>
         </div>
       </div>
-    </div>
-    </div>
-    <div class="container clearfix">
-  
-      <div class="row col-xs-12 offset-sm-3 col-sm-6 offset-md-3 col-md-6 offset-lg-3 col-lg-6 pageControl">
-        <dir-pagination-controls max-size="3" direction-links="true" boundary-links="true">
-        </dir-pagination-controls>
-        </div>
-      </div>
-
-  
-  <div class="saved grid container-fluid">
-    <div>
-      <H1>Compare saved schools</H1>
-      <div id="grid1" ui-grid="gridOptions" class="grid"></div>
     </div>
   </div>
+</div>
+<div class="container clearfix">
+
+  <div class="row text-center">
+    <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true">
+    </dir-pagination-controls>
+  </div>
+</div>
+
+
+<div class="saved grid container-fluid">
+  <div>
+    <H1>Compare saved schools</H1>
+    <div id="grid1" ui-grid="gridOptions" class="grid"></div>
+  </div>
+</div>
