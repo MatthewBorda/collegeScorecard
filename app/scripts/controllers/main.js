@@ -272,7 +272,10 @@ angular.module('collegeScorecardApp')
         step: 10,
         minRange: 10,
         maxRange: 100,
-        pushRange: true
+        pushRange: true,
+         translate: function(value) {
+                        return value + '%';
+                             }
       }
     };
     $scope.hsSlider = {
@@ -284,7 +287,10 @@ angular.module('collegeScorecardApp')
         step: 10,
         minRange: 10,
         maxRange: 100,
-        pushRange: true
+        pushRange: true,
+         translate: function(value) {
+                        return value + '%';
+                             }
       }
     };
     $scope.retainedSlider = {
@@ -296,7 +302,10 @@ angular.module('collegeScorecardApp')
         step: 10,
         minRange: 10,
         maxRange: 100,
-        pushRange: true
+        pushRange: true,
+         translate: function(value) {
+                        return value + '%';
+                             }
       }
     };
     $scope.femaleSlider = {
@@ -308,7 +317,10 @@ angular.module('collegeScorecardApp')
         step: 10,
         minRange: 10,
         maxRange: 100,
-        pushRange: true
+        pushRange: true,
+         translate: function(value) {
+                        return value + '%';
+                             }
       }
     };
     $scope.acceptanceSlider = {
@@ -320,7 +332,10 @@ angular.module('collegeScorecardApp')
         step: 10,
         minRange: 10,
         maxRange: 100,
-        pushRange: true
+        pushRange: true,
+         translate: function(value) {
+                        return value + '%';
+                             }
       }
     };
     $scope.raceSlider = {
@@ -332,7 +347,10 @@ angular.module('collegeScorecardApp')
         step: 10,
         minRange: 10,
         maxRange: 100,
-        pushRange: true
+        pushRange: true,
+         translate: function(value) {
+                        return value + '%';
+                             }
       }
     };
     $scope.genSlider = {
@@ -344,7 +362,10 @@ angular.module('collegeScorecardApp')
         step: 10,
         minRange: 10,
         maxRange: 100,
-        pushRange: true
+        pushRange: true,
+         translate: function(value) {
+                        return value + '%';
+                             }
       }
     };
     $scope.pellSlider = {
@@ -356,7 +377,10 @@ angular.module('collegeScorecardApp')
         step: 10,
         minRange: 10,
         maxRange: 100,
-        pushRange: true
+        pushRange: true,
+         translate: function(value) {
+                        return value + '%';
+                             }
       }
     };
     $scope.priceSlider = {
@@ -368,7 +392,10 @@ angular.module('collegeScorecardApp')
         step: 10,
         minRange: 10,
         maxRange: 100,
-        pushRange: true
+        pushRange: true,
+        translate: function(value) {
+      return '$' + value;
+    }
       }
     };
 
@@ -382,7 +409,10 @@ angular.module('collegeScorecardApp')
         step: 1000,
         minRange: 1000,
         maxRange: 100000,
-        pushRange: true
+        pushRange: true,
+        translate: function(value) {
+      return '$' + value;
+    }
       }
     };
     $scope.netSlider = {
@@ -395,7 +425,10 @@ angular.module('collegeScorecardApp')
         step: 1000,
         minRange: 1000,
         maxRange: 100000,
-        pushRange: true
+        pushRange: true,
+        translate: function(value) {
+      return '$' + value;
+    }
       }
     };
     $scope.tuitionSlider = {
@@ -424,7 +457,10 @@ angular.module('collegeScorecardApp')
         step: 1000,
         minRange: 1000,
         maxRange: 100000,
-        pushRange: true
+        pushRange: true,
+        translate: function(value) {
+      return '$' + value;
+    }
       }
     };
 
@@ -438,7 +474,10 @@ angular.module('collegeScorecardApp')
         step: 1000,
         minRange: 1000,
         maxRange: 100000,
-        pushRange: true
+        pushRange: true,
+        translate: function(value) {
+      return '$' + value;
+    }
       }
     };
 
@@ -451,7 +490,10 @@ angular.module('collegeScorecardApp')
         step: 1000,
         minRange: 1000,
         maxRange: 100000,
-        pushRange: true
+        pushRange: true,
+        translate: function(value) {
+      return '$' + value;
+    }
       }
     };
     $scope.earning1Slider = {
@@ -463,7 +505,10 @@ angular.module('collegeScorecardApp')
         step: 1000,
         minRange: 1000,
         maxRange: 100000,
-        pushRange: true
+        pushRange: true,
+        translate: function(value) {
+      return '$' + value;
+    }
       }
     };
     $scope.classSlider = {
@@ -475,7 +520,10 @@ angular.module('collegeScorecardApp')
         step: 1000,
         minRange: 1000,
         maxRange: 60000,
-        pushRange: true
+        pushRange: true,
+        translate: function(value) {
+      return '$' + value;
+    }
       }
     };
     $scope.SATslider = {
