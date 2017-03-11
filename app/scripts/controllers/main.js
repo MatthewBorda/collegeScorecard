@@ -52,12 +52,7 @@ angular.module('collegeScorecardApp')
         minHS: $scope.hsSlider.minValue / 100,
         maxHS: $scope.hsSlider.maxValue / 100,
       });
-      //      $scope.searchQuery = $scope.school;
-      //       $scope.searchmaxClass = $scope.classSlider.maxValue;
-      //       $scope.searchminClass = $scope.classSlider.minValue;
-
-
-    }
+     }
 
     //   Local storage
     $scope.saveSchool = function(schools) {
@@ -262,7 +257,10 @@ angular.module('collegeScorecardApp')
         step: 10,
         minRange: 10,
         maxRange: 100,
-        pushRange: true
+        pushRange: true,
+         translate: function(value) {
+                        return value + '%';
+                             }
       }
     };
     $scope.completionSlider = {
@@ -410,7 +408,10 @@ angular.module('collegeScorecardApp')
         step: 1000,
         minRange: 1000,
         maxRange: 100000,
-        pushRange: true
+        pushRange: true,
+        translate: function(value) {
+      return '$' + value;
+    }
       }
     };
     $scope.debtSlider = {
