@@ -52,6 +52,7 @@ angular.module('collegeScorecardApp')
         minHS: $scope.hsSlider.minValue / 100,
         maxHS: $scope.hsSlider.maxValue / 100,
       });
+      
      }
 
     //   Local storage
@@ -228,11 +229,9 @@ angular.module('collegeScorecardApp')
       ]
     };
     $scope.removeSchool = function() {
-      alert($scope.gridOptions.data.id);
+      alert('Remove from Local Storage');
     };
-// $localStorage.$reset({
-//     counter: 42
-// });
+
     $scope.savedSchools = $localStorage.compareSchools;
     //Search filters 
     //     $scope.degree = ['Any', "Two-Year (Associates)", "Four-Year (Bachelor's)"];
