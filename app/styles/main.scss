@@ -33,7 +33,11 @@ font-family: Montserrat, "Helvetica Neue", Helvetica, arial, sans-serif;
   border:  2px solid #7F7F7F;
   text-align: center;
   background-color: #FFFFFF;
-  margin:2px;
+}
+.pageControl {
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
 }
 .searchGroup {
     border-top: 1px solid #7F7F7F;
@@ -52,10 +56,10 @@ font-family: Montserrat, "Helvetica Neue", Helvetica, arial, sans-serif;
    font-weight: bold;
   color:#444444;
    text-transform: uppercase;
-  height:250px;
+  height:200px;
 }
 .schoolHeight{
-  height:100px;
+  height:75px;
 }
 
 .grid {
